@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ganesh Sapkota — Personal Website</title>
+  <meta name="description" content="Personal website / portfolio of Ganesh Sapkota — mechanical engineer, energy auditor, and researcher.">
+  <meta name="author" content="Ganesh Sapkota">
+  <style>
+    /* Simple, modern responsive styles (single-file). Customize colors below */
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max-width:1000px;
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0; font-family:var(--font-sans); background:linear-gradient(180deg,#071024 0%, #081226 60%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      display:flex; align-items:flex-start; justify-content:center; padding:36px 18px;
+    }
+    .container{width:100%;max-width:var(--max-width)}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021022}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+    nav a:hover{background:var(--glass);color:#fff}
+
+    /* mobile menu */
+    .menu-toggle{display:none;background:none;border:0;color:var(--muted);font-size:20px}
+    @media(max-width:700px){nav{display:none} .menu-toggle{display:block}}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .hero h1{margin:0;font-size:28px}
+    .hero p{color:var(--muted);margin-top:10px;line-height:1.5}
+    .cta{margin-top:16px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--accent);color:#022; text-decoration:none;font-weight:600}
+    .small-card{background:var(--card);padding:18px;border-radius:12px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    main{margin-top:18px;display:grid;grid-template-columns:2fr 1fr;gap:20px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr} main{grid-template-columns:1fr}}
+
+    section.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    section.card h2{margin-top:0}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 6px 0}
+    .meta{color:var(--muted);font-size:13px}
+
+    .contact-form{display:flex;flex-direction:column;gap:8px}
+    .input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    .input::placeholder{color:var(--muted)}
+    .submit{background:transparent;border:1px solid var(--accent);padding:10px;border-radius:10px;color:var(--accent);cursor:pointer}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* subtle utilities */
+    .muted{color:var(--muted)}
+    a.inline-link{color:var(--accent);text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">GS</div>
+        <div>
+          <div style="font-weight:700">Ganesh Sapkota</div>
+          <div class="muted" style="font-size:13px">Mechanical Engineer • Energy Auditor • Researcher</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Hi — I'm Ganesh. I design, model, and audit energy systems.</h1>
+        <p>Mechanical engineer focused on renewable energy, energy auditing for buildings and industries, CFD &amp; FEA simulations, and applied operations research. I build prototypes, write reports, and present findings in both Nepali and English.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a style="margin-left:10px;color:var(--muted)" href="#projects">See projects →</a>
+        </div>
+
+        <div style="margin-top:18px" class="small-card">
+          <div style="font-weight:700">Key skills</div>
+          <div class="skills">
+            <div class="skill">Energy Audit</div>
+            <div class="skill">CFD / FEA</div>
+            <div class="skill">SolidWorks</div>
+            <div class="skill">MATLAB</div>
+            <div class="skill">LaTeX</div>
+            <div class="skill">Operations Research</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="small-card" style="text-align:center">
+        <img src="https://via.placeholder.com/300x200?text=Project+Photo" alt="Project image" style="width:100%;border-radius:8px;margin-bottom:12px">
+        <div style="font-weight:700">Energy Audit — Residential Sector</div>
+        <div class="muted" style="font-size:13px;margin-top:6px">Lead auditor for a 300-building residential energy audit in Nepal.</div>
+        <div style="margin-top:12px"><a class="inline-link" href="#projects">Read case study</a></div>
+      </aside>
+    </section>
+
+    <main>
+      <section class="card" id="about">
+        <h2>About me</h2>
+        <p>I graduated with a B.E. in Mechanical Engineering from Pulchowk Campus and work on energy audits, renewable energy system design, and mechanical system modeling. I enjoy translating technical guidelines into Nepali and writing clear, reproducible energy audit reports.</p>
+        <ul>
+          <li>Licensed by Nepal Engineering Council</li>
+          <li>Winner — National Go-Kart (2023, 2024)</li>
+          <li>Internship — Ropeway Nepal Pvt. Ltd.</li>
+        </ul>
+
+        <h3 id="resume">Resume &amp; CV</h3>
+        <p class="muted">Download: <a class="inline-link" href="#">Resume (PDF)</a> — Replace placeholder link with your actual file in the repo.</p>
+      </section>
+
+      <aside>
+        <section class="card" id="projects">
+          <h2>Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <h3>Go-Kart Turbocharger Study</h3>
+              <div class="meta">CFD, Experimental testing</div>
+              <p class="muted">Performance comparisons of different turbocharger configurations on a go-kart platform.</p>
+            </article>
+            <article class="project">
+              <h3>Bamboo Panel Production</h3>
+              <div class="meta">B.E. Thesis — Automated adhesive &amp; pressing</div>
+              <p class="muted">Design and testing of bamboo-based composite panels.</p>
+            </article>
+            <article class="project">
+              <h3>Energy Audit Guidelines Translation</h3>
+              <div class="meta">Translation • Nepali</div>
+              <p class="muted">Word-for-word translation of national energy audit guidelines for industry and domestic sectors.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="contact" style="margin-top:12px">
+          <h2>Contact</h2>
+          <p class="muted">Prefer email for professional inquiries.</p>
+          <form class="contact-form" onsubmit="sendEmail(event)">
+            <input class="input" id="name" placeholder="Your name" required>
+            <input class="input" id="email" type="email" placeholder="Your email" required>
+            <textarea id="message" class="input" rows="4" placeholder="Brief message" required></textarea>
+            <button type="submit" class="submit">Send (opens mail)</button>
+          </form>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Ganesh Sapkota — Built with ❤️. <span class="muted">Host on GitHub Pages by pushing this file as <code>index.html</code>.</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers: toggling mobile nav and a mailto form
+    function toggleMenu(){
+      const nav = document.querySelector('nav');
+      const btn = document.querySelector('.menu-toggle');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if(nav.style.display === 'flex') nav.style.display = '';
+      else nav.style.display = 'flex';
+    }
+
+    function sendEmail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Website contact from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      // opens user's email client. Replace with server endpoint or form service if you want form handling.
+      window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+    }
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!--
+    INSTRUCTIONS:
+    1) Save this file as index.html and put it at the root of a GitHub repo (or a branch) named: <your-username>.github.io
+    2) To host via GitHub Pages: Push to main branch and enable Pages in repo settings, or create a repo named <your-username>.github.io and push this file as index.html.
+    3) Replace placeholder images and links (Resume PDF link, mailto address, project images) with real files in the repo.
+    4) If you want a multi-page site or a resume download, I can add those too.
+  -->
+</body>
+</html>
