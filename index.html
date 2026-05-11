@@ -1,212 +1,532 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Ganesh Sapkota — Personal Website</title>
-  <meta name="description" content="Personal website / portfolio of Ganesh Sapkota — mechanical engineer, energy auditor, and researcher.">
-  <meta name="author" content="Ganesh Sapkota">
-  <style>
-    /* Simple, modern responsive styles (single-file). Customize colors below */
-    :root{
-      --bg:#0f1724; /* dark navy */
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#06b6d4; /* teal */
-      --glass: rgba(255,255,255,0.03);
-      --radius:14px;
-      --max-width:1000px;
-      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{
-      margin:0; font-family:var(--font-sans); background:linear-gradient(180deg,#071024 0%, #081226 60%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      display:flex; align-items:flex-start; justify-content:center; padding:36px 18px;
-    }
-    .container{width:100%;max-width:var(--max-width)}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diggaj Niraula — Mechanical Engineer & Renewable Energy</title>
+  <meta name="description" content="Portfolio of Diggaj Niraula — Mechanical Engineer from Thapathali Campus, IOE. MSc Renewable Energy at Pulchowk Campus. CAD design, data analysis, sustainable energy.">
 
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021022}
-    nav{display:flex;gap:12px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
-    nav a:hover{background:var(--glass);color:#fff}
+  <meta property="og:title" content="Diggaj Niraula — Engineer × Energy">
+  <meta property="og:description" content="Bridging mechanical engineering with renewable energy for a sustainable future.">
+  <meta property="og:type" content="website">
 
-    /* mobile menu */
-    .menu-toggle{display:none;background:none;border:0;color:var(--muted);font-size:20px}
-    @media(max-width:700px){nav{display:none} .menu-toggle{display:block}}
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);box-shadow:0 6px 24px rgba(2,6,23,0.6)}
-    .hero h1{margin:0;font-size:28px}
-    .hero p{color:var(--muted);margin-top:10px;line-height:1.5}
-    .cta{margin-top:16px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--accent);color:#022; text-decoration:none;font-weight:600}
-    .small-card{background:var(--card);padding:18px;border-radius:12px}
-
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
-
-    main{margin-top:18px;display:grid;grid-template-columns:2fr 1fr;gap:20px}
-    @media(max-width:900px){.hero{grid-template-columns:1fr} main{grid-template-columns:1fr}}
-
-    section.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
-    section.card h2{margin-top:0}
-
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02)}
-    .project h3{margin:0 0 6px 0}
-    .meta{color:var(--muted);font-size:13px}
-
-    .contact-form{display:flex;flex-direction:column;gap:8px}
-    .input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
-    .input::placeholder{color:var(--muted)}
-    .submit{background:transparent;border:1px solid var(--accent);padding:10px;border-radius:10px;color:var(--accent);cursor:pointer}
-
-    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
-
-    /* subtle utilities */
-    .muted{color:var(--muted)}
-    a.inline-link{color:var(--accent);text-decoration:none}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">GS</div>
-        <div>
-          <div style="font-weight:700">Ganesh Sapkota</div>
-          <div class="muted" style="font-size:13px">Mechanical Engineer • Energy Auditor • Researcher</div>
-        </div>
-      </div>
-
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <button class="menu-toggle" aria-expanded="false" onclick="toggleMenu()">☰</button>
-    </header>
-
-    <section class="hero">
-      <div>
-        <h1>Hi — I'm Ganesh. I design, model, and audit energy systems.</h1>
-        <p>Mechanical engineer focused on renewable energy, energy auditing for buildings and industries, CFD &amp; FEA simulations, and applied operations research. I build prototypes, write reports, and present findings in both Nepali and English.</p>
-        <div class="cta">
-          <a class="btn" href="#contact">Get in touch</a>
-          <a style="margin-left:10px;color:var(--muted)" href="#projects">See projects →</a>
-        </div>
-
-        <div style="margin-top:18px" class="small-card">
-          <div style="font-weight:700">Key skills</div>
-          <div class="skills">
-            <div class="skill">Energy Audit</div>
-            <div class="skill">CFD / FEA</div>
-            <div class="skill">SolidWorks</div>
-            <div class="skill">MATLAB</div>
-            <div class="skill">LaTeX</div>
-            <div class="skill">Operations Research</div>
-          </div>
-        </div>
-      </div>
-
-      <aside class="small-card" style="text-align:center">
-        <img src="https://via.placeholder.com/300x200?text=Project+Photo" alt="Project image" style="width:100%;border-radius:8px;margin-bottom:12px">
-        <div style="font-weight:700">Energy Audit — Residential Sector</div>
-        <div class="muted" style="font-size:13px;margin-top:6px">Lead auditor for a 300-building residential energy audit in Nepal.</div>
-        <div style="margin-top:12px"><a class="inline-link" href="#projects">Read case study</a></div>
-      </aside>
-    </section>
-
-    <main>
-      <section class="card" id="about">
-        <h2>About me</h2>
-        <p>I graduated with a B.E. in Mechanical Engineering from Pulchowk Campus and work on energy audits, renewable energy system design, and mechanical system modeling. I enjoy translating technical guidelines into Nepali and writing clear, reproducible energy audit reports.</p>
-        <ul>
-          <li>Licensed by Nepal Engineering Council</li>
-          <li>Winner — National Go-Kart (2023, 2024)</li>
-          <li>Internship — Ropeway Nepal Pvt. Ltd.</li>
-        </ul>
-
-        <h3 id="resume">Resume &amp; CV</h3>
-        <p class="muted">Download: <a class="inline-link" href="#">Resume (PDF)</a> — Replace placeholder link with your actual file in the repo.</p>
-      </section>
-
-      <aside>
-        <section class="card" id="projects">
-          <h2>Projects</h2>
-          <div class="projects">
-            <article class="project">
-              <h3>Go-Kart Turbocharger Study</h3>
-              <div class="meta">CFD, Experimental testing</div>
-              <p class="muted">Performance comparisons of different turbocharger configurations on a go-kart platform.</p>
-            </article>
-            <article class="project">
-              <h3>Bamboo Panel Production</h3>
-              <div class="meta">B.E. Thesis — Automated adhesive &amp; pressing</div>
-              <p class="muted">Design and testing of bamboo-based composite panels.</p>
-            </article>
-            <article class="project">
-              <h3>Energy Audit Guidelines Translation</h3>
-              <div class="meta">Translation • Nepali</div>
-              <p class="muted">Word-for-word translation of national energy audit guidelines for industry and domestic sectors.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="card" id="contact" style="margin-top:12px">
-          <h2>Contact</h2>
-          <p class="muted">Prefer email for professional inquiries.</p>
-          <form class="contact-form" onsubmit="sendEmail(event)">
-            <input class="input" id="name" placeholder="Your name" required>
-            <input class="input" id="email" type="email" placeholder="Your email" required>
-            <textarea id="message" class="input" rows="4" placeholder="Brief message" required></textarea>
-            <button type="submit" class="submit">Send (opens mail)</button>
-          </form>
-        </section>
-      </aside>
-    </main>
-
-    <footer>
-      <div>© <span id="year"></span> Ganesh Sapkota — Built with ❤️. <span class="muted">Host on GitHub Pages by pushing this file as <code>index.html</code>.</span></div>
-    </footer>
-  </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 
   <script>
-    // small helpers: toggling mobile nav and a mailto form
-    function toggleMenu(){
-      const nav = document.querySelector('nav');
-      const btn = document.querySelector('.menu-toggle');
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      if(nav.style.display === 'flex') nav.style.display = '';
-      else nav.style.display = 'flex';
-    }
-
-    function sendEmail(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent('Website contact from ' + name);
-      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-      // opens user's email client. Replace with server endpoint or form service if you want form handling.
-      window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
-    }
-
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){var t=localStorage.getItem('dn-theme');if(t==='light')document.documentElement.classList.add('light');})();
   </script>
 
-  <!--
-    INSTRUCTIONS:
-    1) Save this file as index.html and put it at the root of a GitHub repo (or a branch) named: <your-username>.github.io
-    2) To host via GitHub Pages: Push to main branch and enable Pages in repo settings, or create a repo named <your-username>.github.io and push this file as index.html.
-    3) Replace placeholder images and links (Resume PDF link, mailto address, project images) with real files in the repo.
-    4) If you want a multi-page site or a resume download, I can add those too.
-  -->
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Diggaj Niraula","email":"diggajniraula360@gmail.com","jobTitle":"Mechanical Engineer","url":"https://www.linkedin.com/in/diggaj-niraula18/","alumniOf":[{"@type":"EducationalOrganization","name":"Thapathali Campus, IOE, Tribhuvan University"},{"@type":"EducationalOrganization","name":"Pulchowk Campus, IOE, Tribhuvan University"}],"knowsAbout":["Mechanical Engineering","Renewable Energy","CAD Design","SolidWorks","Data Analysis"]}
+  </script>
+</head>
+<body>
+
+  <!-- Cursor glow follower -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-text">DN</span>
+        <span class="nav__logo-dot"></span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="#home" class="nav__link active" data-text="Home">Home</a>
+        <a href="#about" class="nav__link" data-text="About">About</a>
+        <a href="#education" class="nav__link" data-text="Education">Education</a>
+        <a href="#projects" class="nav__link" data-text="Projects">Projects</a>
+        <a href="#contact" class="nav__link" data-text="Contact">Contact</a>
+      </div>
+      <div class="nav__right">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <div class="theme-btn__track">
+            <div class="theme-btn__thumb">
+              <svg class="theme-btn__sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="theme-btn__moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+          </div>
+        </button>
+        <button class="nav__burger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="heroCanvas"></canvas>
+      <div class="hero__gradient"></div>
+      <div class="hero__noise"></div>
+
+      <div class="hero__split">
+        <!-- LEFT: Text content -->
+        <div class="hero__text">
+          <div class="hero__badge anim-pop" style="--i:0">
+            <span class="hero__badge-pulse"></span>
+            <span>Available for opportunities</span>
+          </div>
+
+          <h1 class="hero__title anim-pop" style="--i:1">
+            Diggaj<br><span class="hero__title-accent">Niraula</span>
+          </h1>
+
+          <div class="hero__type anim-pop" style="--i:2">
+            <span class="hero__type-static">I will build the future as a</span>
+            <span class="hero__type-dynamic" id="typingText"></span>
+            <span class="hero__type-cursor"></span>
+          </div>
+
+          <p class="hero__desc anim-pop" style="--i:3">
+            Bridging mechanical engineering with renewable energy solutions <em>for a sustainable tomorrow.</em>
+          </p>
+
+          <div class="hero__actions anim-pop" style="--i:4">
+            <a href="assets/resume.pdf" class="btn btn--glow" download>
+              <span class="btn__shimmer"></span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Resume
+            </a>
+            <a href="#contact" class="btn btn--outline">
+              Let's Talk
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/diggaj-niraula18/" target="_blank" rel="noopener" class="btn btn--icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Photo / Avatar -->
+        <div class="hero__photo-wrap anim-pop" style="--i:2">
+          <div class="hero__photo">
+            <!-- Drop your photo as assets/profile.jpg to auto-replace this -->
+            <img src="assets/profile.jpg" alt="Diggaj Niraula" id="heroImg">
+            <div class="hero__avatar" id="heroAvatar">
+              <!-- Animated gradient mesh background -->
+              <div class="hero__avatar-mesh"></div>
+              <!-- Person silhouette SVG -->
+              <svg class="hero__avatar-icon" viewBox="0 0 120 120" fill="none">
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="var(--teal)"/>
+                    <stop offset="100%" stop-color="var(--electric)"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="42" r="20" fill="url(#avatarGrad)" opacity="0.9"/>
+                <ellipse cx="60" cy="95" rx="34" ry="22" fill="url(#avatarGrad)" opacity="0.7"/>
+              </svg>
+              <!-- Floating particles inside avatar -->
+              <div class="hero__avatar-particles">
+                <span style="--px:20%;--py:30%;--ps:3px;--pd:3s"></span>
+                <span style="--px:70%;--py:25%;--ps:2px;--pd:4s"></span>
+                <span style="--px:45%;--py:70%;--ps:2.5px;--pd:2.5s"></span>
+                <span style="--px:80%;--py:60%;--ps:2px;--pd:3.5s"></span>
+                <span style="--px:15%;--py:65%;--ps:3px;--pd:4.5s"></span>
+                <span style="--px:55%;--py:20%;--ps:1.5px;--pd:3.2s"></span>
+              </div>
+              <!-- Initials watermark -->
+              <span class="hero__avatar-initials">DN</span>
+            </div>
+          </div>
+          <!-- Spinning border ring -->
+          <svg class="hero__photo-border" viewBox="0 0 320 320">
+            <defs>
+              <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="var(--teal)"/>
+                <stop offset="50%" stop-color="var(--electric)"/>
+                <stop offset="100%" stop-color="var(--lime)"/>
+              </linearGradient>
+            </defs>
+            <circle cx="160" cy="160" r="148" fill="none" stroke="url(#ringGrad)" stroke-width="2" stroke-dasharray="120 40 60 40" opacity="0.5">
+              <animateTransform attributeName="transform" type="rotate" from="0 160 160" to="360 160 160" dur="25s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="160" cy="160" r="138" fill="none" stroke="var(--electric)" stroke-width="0.8" stroke-dasharray="8 12" opacity="0.2">
+              <animateTransform attributeName="transform" type="rotate" from="360 160 160" to="0 160 160" dur="35s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+          <div class="hero__photo-glow"></div>
+          <!-- Orbiting dots -->
+          <div class="hero__photo-orbit">
+            <span style="--a:0deg; --c:var(--teal)"></span>
+            <span style="--a:72deg; --c:var(--electric)"></span>
+            <span style="--a:144deg; --c:var(--lime)"></span>
+            <span style="--a:216deg; --c:var(--orange)"></span>
+            <span style="--a:288deg; --c:var(--teal)"></span>
+          </div>
+          <!-- Corner accent marks -->
+          <div class="hero__photo-corners">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll anim-pop" style="--i:5">
+        <div class="hero__scroll-line">
+          <div class="hero__scroll-energy"></div>
+        </div>
+        <span>Explore</span>
+      </div>
+    </section>
+
+    <!-- Dramatic wave divider between Hero & About -->
+    <div class="divider-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="var(--surface)"/>
+        <path d="M0,80 C360,20 720,100 1080,40 C1260,10 1380,50 1440,70 L1440,120 L0,120 Z" fill="var(--surface)" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <!-- ========== ABOUT — Bento Grid ========== -->
+    <section class="section section--about" id="about">
+      <div class="section__bg-pattern"></div>
+      <div class="container">
+
+        <!-- Header row -->
+        <div class="about-header reveal-up">
+          <div class="section-tag">
+            <span class="section-tag__dot"></span>
+            About Me
+          </div>
+          <h2 class="section-heading" style="--d:1">
+            Engineer<span class="accent-dot">.</span> Researcher<span class="accent-dot">.</span> Problem Solver<span class="accent-dot">.</span>
+          </h2>
+        </div>
+
+        <!-- Bento grid -->
+        <div class="bento">
+
+          <!-- BIO card — spans 2 columns -->
+          <div class="bento__card bento__card--bio reveal-up" style="--d:1">
+            <div class="bento__card-glow bento__card-glow--teal"></div>
+            <p class="bento__bio">
+              A mechanical engineer turned renewable energy researcher. With roots at <strong>Thapathali Campus</strong> and advanced studies at <strong>Pulchowk Campus</strong>, I combine analytical precision with creative problem-solving to tackle real-world energy challenges.
+            </p>
+            <p class="bento__bio">
+              From heavy equipment operations to sustainable energy systems — my journey is powered by one question: <em class="highlight">how can engineering build a cleaner future?</em>
+            </p>
+          </div>
+
+          <!-- STATS card -->
+          <div class="bento__card bento__card--stats reveal-up" style="--d:2">
+            <div class="bento__card-glow bento__card-glow--electric"></div>
+            <div class="bento__stat">
+              <span class="bento__stat-num" data-count="6">0</span><span class="bento__stat-plus">+</span>
+              <span class="bento__stat-label">Core Skills</span>
+            </div>
+            <div class="bento__stat-divider"></div>
+            <div class="bento__stat">
+              <span class="bento__stat-num" data-count="2">0</span>
+              <span class="bento__stat-label">Degrees</span>
+            </div>
+            <div class="bento__stat-divider"></div>
+            <div class="bento__stat">
+              <span class="bento__stat-num" data-count="100">0</span><span class="bento__stat-plus">%</span>
+              <span class="bento__stat-label">Driven</span>
+            </div>
+          </div>
+
+          <!-- SKILL CARDS — 6 individual bento cells -->
+          <div class="bento__card bento__card--skill reveal-up" style="--d:3" data-level="95">
+            <div class="skill-card__bar"></div>
+            <svg class="bento__skill-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--teal)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span class="bento__skill-name">SolidWorks</span>
+            <span class="bento__skill-level bento__skill-level--teal">Advanced</span>
+          </div>
+
+          <div class="bento__card bento__card--skill reveal-up" style="--d:4" data-level="90">
+            <div class="skill-card__bar"></div>
+            <svg class="bento__skill-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--teal)" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><line x1="22" y1="8.5" x2="12" y2="15.5"/><line x1="2" y1="8.5" x2="12" y2="15.5"/></svg>
+            <span class="bento__skill-name">CAD Design</span>
+            <span class="bento__skill-level bento__skill-level--teal">Advanced</span>
+          </div>
+
+          <div class="bento__card bento__card--skill reveal-up" style="--d:5" data-level="80">
+            <div class="skill-card__bar"></div>
+            <svg class="bento__skill-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--electric)" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <span class="bento__skill-name">Data Analysis</span>
+            <span class="bento__skill-level bento__skill-level--electric">Proficient</span>
+          </div>
+
+          <div class="bento__card bento__card--skill reveal-up" style="--d:6" data-level="92">
+            <div class="skill-card__bar"></div>
+            <svg class="bento__skill-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--electric)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+            <span class="bento__skill-name">MS Excel</span>
+            <span class="bento__skill-level bento__skill-level--electric">Advanced</span>
+          </div>
+
+          <div class="bento__card bento__card--skill reveal-up" style="--d:7" data-level="75">
+            <div class="skill-card__bar"></div>
+            <svg class="bento__skill-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--lime)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+            <span class="bento__skill-name">Renewable Energy</span>
+            <span class="bento__skill-level bento__skill-level--lime">Research</span>
+          </div>
+
+          <div class="bento__card bento__card--skill reveal-up" style="--d:8" data-level="85">
+            <div class="skill-card__bar"></div>
+            <svg class="bento__skill-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--orange)" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <span class="bento__skill-name">Heavy Equipment</span>
+            <span class="bento__skill-level bento__skill-level--orange">Professional</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section class="section section--dark" id="education">
+      <div class="section__bg-pattern"></div>
+      <div class="container">
+        <div class="section-tag reveal-up" style="text-align:center;display:flex;justify-content:center;">
+          <span class="section-tag__dot"></span>
+          Education
+        </div>
+        <h2 class="section-heading section-heading--center reveal-up" style="--d:1">Academic Journey</h2>
+        <p class="section-sub reveal-up" style="--d:2">From mechanical fundamentals to renewable energy research</p>
+
+        <div class="edu-cards">
+          <div class="edu-card edu-card--active reveal-up" style="--d:2">
+            <div class="edu-card__glow"></div>
+            <div class="edu-card__top">
+              <span class="edu-card__badge edu-card__badge--live">
+                <span class="edu-card__badge-dot"></span>
+                Currently Pursuing
+              </span>
+              <span class="edu-card__year">2024 — Present</span>
+            </div>
+            <h3 class="edu-card__degree">MSc in Renewable Energy</h3>
+            <p class="edu-card__school">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              Pulchowk Campus, IOE
+            </p>
+            <p class="edu-card__uni">Tribhuvan University</p>
+            <p class="edu-card__loc">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lalitpur, Nepal
+            </p>
+            <p class="edu-card__desc">Research in sustainable energy systems, renewable technologies, and their impact on Nepal's energy future.</p>
+            <div class="edu-card__tags">
+              <span>Sustainability</span><span>Energy Systems</span><span>Research</span>
+            </div>
+          </div>
+
+          <div class="edu-card reveal-up" style="--d:3">
+            <div class="edu-card__top">
+              <span class="edu-card__badge">Completed</span>
+              <span class="edu-card__year">Graduated</span>
+            </div>
+            <h3 class="edu-card__degree">BE in Mechanical Engineering</h3>
+            <p class="edu-card__school">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              Thapathali Campus, IOE
+            </p>
+            <p class="edu-card__uni">Tribhuvan University</p>
+            <p class="edu-card__loc">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kathmandu, Nepal
+            </p>
+            <p class="edu-card__desc">Comprehensive study in thermodynamics, fluid mechanics, machine design, manufacturing, and CAD/CAM technologies.</p>
+            <div class="edu-card__tags">
+              <span>Thermodynamics</span><span>Machine Design</span><span>CAD/CAM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-tag reveal-up">
+          <span class="section-tag__dot"></span>
+          Projects
+        </div>
+        <h2 class="section-heading reveal-up" style="--d:1">Featured Work</h2>
+        <p class="section-sub section-sub--left reveal-up" style="--d:2">Engineering solutions for real-world challenges</p>
+
+        <div class="project-grid">
+          <article class="proj reveal-up" style="--d:2">
+            <div class="proj__visual proj__visual--1">
+              <div class="proj__icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              </div>
+              <div class="proj__grid-lines"></div>
+            </div>
+            <div class="proj__body">
+              <span class="proj__num">01</span>
+              <h3 class="proj__title">Renewable Energy System Analysis</h3>
+              <p class="proj__desc">Comprehensive analysis evaluating efficiency metrics, cost-benefit ratios, and environmental impact for sustainable energy implementation.</p>
+              <div class="proj__tags">
+                <span>Excel</span><span>Data Analysis</span><span>Research</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj reveal-up" style="--d:3">
+            <div class="proj__visual proj__visual--2">
+              <div class="proj__icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="22" x2="12" y2="15.5"/><line x1="22" y1="8.5" x2="12" y2="15.5"/><line x1="2" y1="8.5" x2="12" y2="15.5"/></svg>
+              </div>
+              <div class="proj__grid-lines"></div>
+            </div>
+            <div class="proj__body">
+              <span class="proj__num">02</span>
+              <h3 class="proj__title">Mechanical Component Design</h3>
+              <p class="proj__desc">Precision-engineered components in SolidWorks with FEA analysis, optimized for manufacturing constraints and material efficiency.</p>
+              <div class="proj__tags">
+                <span>SolidWorks</span><span>CAD</span><span>3D Modeling</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj reveal-up" style="--d:4">
+            <div class="proj__visual proj__visual--3">
+              <div class="proj__icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="proj__grid-lines"></div>
+            </div>
+            <div class="proj__body">
+              <span class="proj__num">03</span>
+              <h3 class="proj__title">Heavy Equipment Efficiency Study</h3>
+              <p class="proj__desc">Data-driven operational efficiency analysis identifying optimization opportunities through performance metrics and maintenance scheduling.</p>
+              <div class="proj__tags">
+                <span>Data Analysis</span><span>Mechanical Eng.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj reveal-up" style="--d:5">
+            <div class="proj__visual proj__visual--4">
+              <div class="proj__icon-wrap">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div class="proj__grid-lines"></div>
+            </div>
+            <div class="proj__body">
+              <span class="proj__num">04</span>
+              <h3 class="proj__title">Sustainable Energy Research</h3>
+              <p class="proj__desc">Exploring the intersection of mechanical engineering and renewable energy tech, focused on Nepal's unique energy landscape.</p>
+              <div class="proj__tags">
+                <span>Renewable Energy</span><span>Research</span><span>Analysis</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section section--dark" id="contact">
+      <div class="section__bg-pattern"></div>
+      <div class="container">
+        <div class="contact-wrap">
+          <div class="contact-info reveal-up">
+            <div class="section-tag">
+              <span class="section-tag__dot"></span>
+              Contact
+            </div>
+            <h2 class="section-heading" style="--d:1">Let's Build<br>Something <span class="gradient-text">Together</span></h2>
+            <p class="contact-info__text">Open to opportunities in renewable energy, mechanical engineering, research collaborations, or just a good conversation.</p>
+
+            <div class="contact-links">
+              <a href="mailto:diggajniraula360@gmail.com" class="contact-link">
+                <div class="contact-link__icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link__label">Email</span>
+                  <span class="contact-link__value">diggajniraula360@gmail.com</span>
+                </div>
+                <svg class="contact-link__arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/diggaj-niraula18/" target="_blank" rel="noopener" class="contact-link">
+                <div class="contact-link__icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link__label">LinkedIn</span>
+                  <span class="contact-link__value">diggaj-niraula18</span>
+                </div>
+                <svg class="contact-link__arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+              <div class="contact-link">
+                <div class="contact-link__icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link__label">Location</span>
+                  <span class="contact-link__value">Nepal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal-up" style="--d:2" id="contactForm" action="https://formsubmit.co/diggajniraula360@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Portfolio Contact">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-field">
+              <input type="text" name="name" id="name" required placeholder=" " autocomplete="name">
+              <label for="name">Your Name</label>
+              <div class="form-field__line"></div>
+            </div>
+            <div class="form-field">
+              <input type="email" name="email" id="email" required placeholder=" " autocomplete="email">
+              <label for="email">Your Email</label>
+              <div class="form-field__line"></div>
+            </div>
+            <div class="form-field">
+              <input type="text" name="subject" id="subject" required placeholder=" ">
+              <label for="subject">Subject</label>
+              <div class="form-field__line"></div>
+            </div>
+            <div class="form-field">
+              <textarea name="message" id="message" required placeholder=" " rows="4"></textarea>
+              <label for="message">Message</label>
+              <div class="form-field__line"></div>
+            </div>
+            <button type="submit" class="btn btn--glow btn--full">
+              <span class="btn__shimmer"></span>
+              Send Message
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand">
+        <span class="footer__dn">DN</span>
+        <span class="footer__copy">&copy; 2026 &middot; Engineered with precision</span>
+      </span>
+      <div class="footer__links">
+        <a href="mailto:diggajniraula360@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/diggaj-niraula18/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <button class="footer__top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
