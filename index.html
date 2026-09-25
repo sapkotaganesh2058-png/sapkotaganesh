@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ganesh Sapkota | Mechanical Engineer & Renewable Energy</title>
   <meta name="description" content="Ganesh Sapkota — Mechanical Engineer and MSc Renewable Energy Engineering candidate working across energy efficiency, modelling, carbon finance and sustainable engineering.">
+  <meta name="theme-color" content="#0f2e23">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -12,49 +14,58 @@
 </head>
 <body>
   <div class="progress" id="progress"></div>
+  <div class="ambient ambient--one"></div>
+  <div class="ambient ambient--two"></div>
 
   <header class="site-nav">
-    <a class="brand" href="#top">GS<span>.</span></a>
+    <a class="brand" href="#top" aria-label="Ganesh Sapkota home">GS<span>.</span></a>
     <nav>
       <a href="#profile">Profile</a>
       <a href="#experience">Experience</a>
       <a href="#work">Work</a>
+      <a href="#field">Field</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="mailto:sapkotaganesh2058@gmail.com">Email me</a>
+    <a class="nav-cta" href="mailto:sapkotaganesh2058@gmail.com">Email me ↗</a>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Mechanical Engineer · Renewable Energy Engineering</p>
-        <h1>Engineering energy systems for a lower-carbon future.</h1>
-        <p class="lead">I work at the intersection of renewable energy, energy efficiency, modelling, operations research and carbon finance — combining field evidence with analytical engineering.</p>
+        <p class="eyebrow"><span></span> Mechanical Engineer · Renewable Energy Engineering</p>
+        <h1>Engineering systems for a lower-carbon future.</h1>
+        <p class="lead">I work across renewable energy, energy efficiency, energy modelling, operations research and carbon finance — connecting field evidence with analytical engineering.</p>
         <div class="hero-links">
-          <a class="button primary" href="#work">Selected work</a>
+          <a class="button primary" href="#work">Explore selected work</a>
           <a class="button ghost" href="https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         </div>
         <div class="hero-meta">
-          <span>Nepal</span>
-          <span>MSc Renewable Energy Engineering · Pulchowk Campus</span>
+          <div><b>Based in</b><span>Nepal</span></div>
+          <div><b>Current study</b><span>MSc Renewable Energy Engineering</span></div>
         </div>
       </div>
 
-      <figure class="hero-visual reveal" id="heroVisual">
-        <img src="assets/ganesh-solar-farm.webp" alt="Ganesh Sapkota at a solar farm in Nepal">
-        <figcaption>
-          <span>Renewable energy in practice</span>
-          <small>Field-based engineering perspective</small>
-        </figcaption>
-      </figure>
+      <div class="hero-stage reveal">
+        <figure class="hero-visual" id="heroVisual">
+          <img src="assets/ganesh-solar-farm.webp" alt="Ganesh Sapkota at a solar farm in Nepal">
+          <figcaption>
+            <span>Renewable energy in practice</span>
+            <small>Engineering · fieldwork · analysis</small>
+          </figcaption>
+        </figure>
+        <div class="hero-note">Energy systems<br>in the real world</div>
+      </div>
     </section>
 
     <section class="statement reveal" id="profile">
       <p class="section-kicker">Profile</p>
       <div class="statement-grid">
-        <h2>Mechanical engineering foundation. Renewable-energy focus. Analytical approach.</h2>
-        <p>I am a Mechanical Engineer currently pursuing an MSc in Renewable Energy Engineering. My work includes municipal energy planning, energy audits, greenhouse-gas projections, carbon-finance research, mathematical modelling and data analysis. I am particularly interested in applying optimization and systems thinking to practical energy and low-carbon development challenges.</p>
+        <h2>Mechanical foundation.<br>Renewable-energy focus.<br>Analytical approach.</h2>
+        <div>
+          <p>I am a Mechanical Engineer currently pursuing an MSc in Renewable Energy Engineering. My work includes municipal energy planning, energy audits, greenhouse-gas projections, carbon-finance research, mathematical modelling and data analysis.</p>
+          <p>I am especially interested in applying optimization, systems thinking and evidence-based analysis to practical energy and low-carbon development challenges.</p>
+        </div>
       </div>
     </section>
 
@@ -63,19 +74,15 @@
         <p class="section-kicker">Experience</p>
         <h2>Professional experience</h2>
       </div>
-
       <article class="timeline-row reveal">
         <div class="timeline-date">Nov 2024 — Present</div>
         <div class="timeline-body">
           <p class="role">Mechanical Engineer</p>
           <h3>Multiscope Solution Pvt. Ltd.</h3>
           <p>Contributing to clean-energy and energy-efficiency assignments, municipal energy planning, energy demand and GHG forecasting, field assessments, national energy-audit reference documents and carbon-finance work.</p>
-          <div class="chips">
-            <span>LEAP</span><span>Energy audits</span><span>GHG scenarios</span><span>Carbon finance</span><span>SPSS</span><span>Technical reporting</span>
-          </div>
+          <div class="chips"><span>LEAP</span><span>Energy audits</span><span>GHG scenarios</span><span>Carbon finance</span><span>SPSS</span><span>Technical reporting</span></div>
         </div>
       </article>
-
       <article class="timeline-row reveal">
         <div class="timeline-date">Oct — Dec 2023</div>
         <div class="timeline-body">
@@ -92,35 +99,48 @@
         <p class="section-kicker">Selected work</p>
         <h2>Projects across energy, climate and engineering</h2>
       </div>
-
       <div class="project-grid">
-        <article class="project-card reveal">
+        <article class="project-card project-card--wide reveal">
           <div class="project-index">01</div>
-          <p class="project-type">GHG accounting · 2025–2026</p>
-          <h3>Carbon Footprint Assessment of Six Eye Hospitals in Nepal</h3>
-          <p>Facility-level GHG inventories covering electricity, diesel, vehicles, LPG, refrigerants, anesthetic gases, solid waste and wastewater, followed by assessment of energy-efficiency and decarbonization measures.</p>
+          <div class="project-content">
+            <p class="project-type">Carbon finance · 2025–2026</p>
+            <h3>National Carbon Finance Handbook</h3>
+            <p>Technical support to a UNDP-supported national initiative, including review and inputs related to NDC 3.0, NAP, LTS, carbon-trade regulations, Article 6, MRV and carbon-market development.</p>
+          </div>
+          <img src="assets/portfolio-2.jpg" alt="Professional presentation during a carbon finance workshop">
         </article>
-
         <article class="project-card reveal">
           <div class="project-index">02</div>
-          <p class="project-type">Carbon finance · 2025–2026</p>
-          <h3>National Carbon Finance Handbook</h3>
-          <p>Technical support to a UNDP-supported national initiative, including policy and literature review related to NDC 3.0, NAP, LTS, carbon-trade regulations, Article 6, MRV and carbon-market development.</p>
+          <p class="project-type">GHG accounting · 2025–2026</p>
+          <h3>Carbon Footprint Assessment of Six Eye Hospitals in Nepal</h3>
+          <p>Facility-level GHG inventories and assessment of energy-efficiency and decarbonization opportunities across healthcare facilities.</p>
         </article>
-
         <article class="project-card reveal">
           <div class="project-index">03</div>
           <p class="project-type">Energy efficiency · 2026</p>
           <h3>Energy Audit of Madhyapur Aspatal Ltd.</h3>
-          <p>Field survey, equipment inventory, electrical measurements and analysis of consumption and demand, with evaluation of energy-saving measures, cost savings and payback periods.</p>
+          <p>Field survey, equipment inventory, electrical measurements, demand analysis and evaluation of energy-saving measures and payback periods.</p>
         </article>
-
         <article class="project-card reveal">
           <div class="project-index">04</div>
           <p class="project-type">Mechanical design</p>
           <h3>Bamboo Panel Manufacturing Machine</h3>
-          <p>Bachelor’s thesis focused on design, 3D modelling, fabrication, assembly, testing and refinement of a manufacturing machine for bamboo-panel production.</p>
+          <p>Bachelor’s thesis focused on design, 3D modelling, fabrication, assembly, testing and refinement of a bamboo-panel manufacturing machine.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="section field-section" id="field">
+      <div class="section-head reveal">
+        <p class="section-kicker">Field & engagement</p>
+        <h2>The work is not only behind a desk.</h2>
+      </div>
+      <div class="photo-mosaic">
+        <figure class="photo photo--a reveal"><img src="assets/portfolio-1.jpg" alt="Professional workshop session"><figcaption>Stakeholder engagement</figcaption></figure>
+        <figure class="photo photo--b reveal"><img src="assets/portfolio-2.jpg" alt="Presentation at a carbon finance validation workshop"><figcaption>Carbon finance workshop</figcaption></figure>
+        <figure class="photo photo--c reveal"><img src="assets/portfolio-3.jpg" alt="Technical workshop presentation"><figcaption>Technical discussion</figcaption></figure>
+        <figure class="photo photo--d reveal"><img src="assets/portfolio-4.jpg" alt="Workshop session with participants"><figcaption>Consultation & analysis</figcaption></figure>
+        <figure class="photo photo--e reveal"><img src="assets/portfolio-5.jpg" alt="Group photograph from a professional workshop"><figcaption>Professional collaboration</figcaption></figure>
       </div>
     </section>
 
@@ -129,7 +149,6 @@
         <p class="section-kicker">Education</p>
         <h2>Academic path</h2>
       </div>
-
       <div class="education-grid">
         <article class="education-card reveal">
           <p class="year">Mar 2025 — Present</p>
@@ -169,13 +188,7 @@
         <h2>Where I want to go deeper</h2>
       </div>
       <div class="interest-list reveal">
-        <span>Renewable energy systems</span>
-        <span>Operations research</span>
-        <span>Energy efficiency</span>
-        <span>Electric mobility & sustainable transport</span>
-        <span>Carbon markets & crediting methodologies</span>
-        <span>GHG accounting & MRV</span>
-        <span>Energy-systems modelling & optimization</span>
+        <span>Renewable energy systems</span><span>Operations research</span><span>Energy efficiency</span><span>Electric mobility & sustainable transport</span><span>Carbon markets & crediting methodologies</span><span>GHG accounting & MRV</span><span>Energy-systems modelling & optimization</span>
       </div>
     </section>
 
@@ -202,10 +215,7 @@
     </section>
   </main>
 
-  <footer>
-    <span>© <span id="year"></span> Ganesh Sapkota</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
+  <footer><span>© <span id="year"></span> Ganesh Sapkota</span><a href="#top">Back to top ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
