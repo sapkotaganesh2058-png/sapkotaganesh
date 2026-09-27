@@ -438,3 +438,15 @@ main{overflow:clip}
   .reveal{opacity:1;transform:none}
   .cursor-glow{display:none}
 }
+
+/* Bachelor's thesis photo gallery */
+.project--bamboo{grid-column:span 2;min-height:0}
+.bamboo-gallery{padding:12px 12px 0}
+.bamboo-feature{display:block;overflow:hidden;border-radius:18px;background:#d9ded7;height:380px}
+.bamboo-feature img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 62%}
+.bamboo-gallery-strip{display:flex;gap:8px;overflow-x:auto;padding:10px 0 4px;scroll-snap-type:x proximity}
+.bamboo-gallery-strip a{flex:0 0 116px;height:84px;border-radius:9px;overflow:hidden;scroll-snap-align:start;background:#d9ded7}
+.bamboo-gallery-strip img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.bamboo-gallery-strip a:hover img{transform:scale(1.08)}
+.project--bamboo .project-meta{margin-bottom:20px}
+@media(max-width:640px){.project--bamboo{grid-column:auto}.bamboo-feature{height:250px}.bamboo-gallery-strip a{flex-basis:88px;height:68px}}
