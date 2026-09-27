@@ -79,10 +79,58 @@
     });
 
     navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('click', (event) => {
+      if (nav.classList.contains('open') && !nav.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+    });
     addEventListener('resize', () => {
       if (innerWidth > 900) closeMenu();
     });
   }
+
+  document.querySelectorAll('.project-gallery').forEach((gallery) => {
+    const feature = gallery.querySelector('.project-feature');
+    const featureImage = feature?.querySelector('img');
+    const thumbnails = [...gallery.querySelectorAll('.project-thumbnails a')];
+    if (!feature || !featureImage || !thumbnails.length) return;
+
+    const label = document.createElement('span');
+    label.className = 'project-photo-label';
+    const caption = document.createElement('span');
+    const counter = document.createElement('span');
+    label.append(caption, counter);
+    feature.append(label);
+
+    const hint = document.createElement('p');
+    hint.className = 'project-gallery-hint';
+    hint.textContent = 'Select a photo · Click the large image to open full size';
+    gallery.append(hint);
+
+    const select = (thumbnail) => {
+      const index = thumbnails.indexOf(thumbnail);
+      if (index < 0) return;
+      const image = thumbnail.querySelector('img');
+      if (!image) return;
+      feature.href = thumbnail.href;
+      featureImage.src = image.src;
+      featureImage.alt = image.alt;
+      feature.setAttribute('aria-label', 'Open full-size image: ' + image.alt);
+      caption.textContent = image.alt;
+      counter.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(thumbnails.length).padStart(2, '0');
+      thumbnails.forEach((item) => {
+        item.classList.toggle('is-selected', item === thumbnail);
+        if (item === thumbnail) item.setAttribute('aria-current', 'true');
+        else item.removeAttribute('aria-current');
+      });
+    };
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener('click', (event) => {
+        event.preventDefault();
+        select(thumbnail);
+      });
+    });
+    select(thumbnails.find((item) => item.href === feature.href) || thumbnails[0]);
+  });
 
   if (!reduceMotion && matchMedia('(pointer:fine)').matches) {
     if (glow) {
