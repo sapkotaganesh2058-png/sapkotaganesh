@@ -16,6 +16,7 @@ Personal academic and professional portfolio of Ganesh Sapkota. Static HTML, CSS
 │       ├── profile/      hero-sweater.webp (intro), portrait-sweater.webp (header), bouquet.webp (closing), solar-field-hd.webp
 │       ├── workshops/    Workshop photos
 │       ├── erasmus/      Thessaloniki photos
+│       ├── campus/       go-kart/ and graduation/ galleries
 │       └── projects/     One folder per project (01.webp, 02.webp, ...)
 ├── CNAME                 Custom domain for GitHub Pages
 ├── robots.txt
