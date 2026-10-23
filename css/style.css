@@ -224,7 +224,7 @@ p { margin: 0 0 1rem; max-width: 66ch; }
 /* intro */
 
 .field-photo { margin: 2.2rem 0 0; }
-.field-photo img { width: 100%; max-width: 560px; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); }
+.field-photo img { width: 100%; height: auto; max-width: 560px; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); }
 figcaption { font-family: var(--sans); font-size: .85rem; color: var(--muted); margin-top: .5rem; }
 
 .focus-list { margin: 0; padding: 0; list-style: none; display: grid; gap: .9rem; }
@@ -429,6 +429,19 @@ a.cover:hover img { transform: scale(1.04); }
 .jobs thead th { font-weight: 600; border-bottom-color: var(--rule-strong); }
 .jobs tbody th { font-weight: 600; }
 
+
+/* university logos in the education timeline */
+.uni-logo { float: right; margin: 0 0 .6rem 1.2rem; background: #fff; border-radius: 8px; padding: 6px 8px; border: 1px solid var(--rule); object-fit: contain; }
+.uni-logo--auth { width: 150px; height: auto; }
+.uni-logo--tu { width: 58px; height: auto; padding: 5px; }
+.timeline .chips { clear: both; }
+
+/* closing photo */
+.closing { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 2.5rem; align-items: center; }
+.closing h2::after { display: none; }
+.closing-photo { margin: 0; }
+.closing-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 12%; border-radius: 26px 110px 26px 110px; border: 1px solid var(--rule-strong); box-shadow: var(--shadow); }
+
 /* ---------- overlays ---------- */
 dialog { border: 0; padding: 0; color: var(--ink); }
 dialog::backdrop { background: rgba(9, 16, 21, .6); backdrop-filter: blur(3px); }
@@ -505,6 +518,10 @@ dialog::backdrop { background: rgba(9, 16, 21, .6); backdrop-filter: blur(3px); 
   h2 { font-size: 1.55rem; }
   .bar-cv { display: none; }
   .or-grid { grid-template-columns: 1fr; }
+  .closing { grid-template-columns: 1fr; gap: 1.5rem; }
+  .closing-photo { max-width: 220px; }
+  .uni-logo--auth { width: 112px; }
+  .uni-logo--tu { width: 48px; }
   .metrics { grid-template-columns: 1fr; }
   .demo { padding: 1.1rem; }
   .project { grid-template-columns: 1fr; padding: .9rem; }

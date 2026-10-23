@@ -81,16 +81,24 @@
       if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
     });
   }
+  var visible = {}, atBottom = false;
+  function pickActive() {
+    if (atBottom) { setActive("contact"); return; }
+    var best = null, bestVal = 0;
+    sections.forEach(function (s) { if ((visible[s.id] || 0) > bestVal) { best = s; bestVal = visible[s.id]; } });
+    if (best) setActive(tabOf(best));
+  }
   if ("IntersectionObserver" in window && sections.length) {
-    var visible = {};
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0; });
-      var best = null, bestVal = 0;
-      sections.forEach(function (s) { if ((visible[s.id] || 0) > bestVal) { best = s; bestVal = visible[s.id]; } });
-      if (best) setActive(tabOf(best));
+      pickActive();
     }, { rootMargin: "-12% 0px -55% 0px", threshold: [0, 0.1, 0.4, 1] });
     sections.forEach(function (s) { io.observe(s); });
   }
+  window.addEventListener("scroll", function () {
+    var now = window.innerHeight + window.scrollY >= doc.scrollHeight - 6;
+    if (now !== atBottom) { atBottom = now; pickActive(); }
+  }, { passive: true });
   setActive("top");
 
   /* ---------- project filters ---------- */
