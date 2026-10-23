@@ -13,7 +13,7 @@ Personal academic and professional portfolio of Ganesh Sapkota. Static HTML, CSS
 │   ├── cv/               Downloadable CV (PDF)
 │   ├── icons/            Favicon
 │   └── images/
-│       ├── profile/      hero-sweater.webp (intro photo), portrait-sweater.webp (header), solar-field.webp
+│       ├── profile/      hero-sweater.webp (intro), portrait-sweater.webp (header), bouquet.webp (closing), solar-field-hd.webp
 │       ├── workshops/    Workshop photos
 │       ├── erasmus/      Thessaloniki photos
 │       └── projects/     One folder per project (01.webp, 02.webp, ...)
