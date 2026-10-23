@@ -41,18 +41,19 @@
   syncThemeButton();
 
   /* ---------- mobile menu ---------- */
-  var sidebar = $("#sidebar");
+  var topbar = $("#topbar");
   var menuBtn = $("#menuBtn");
   function setMenu(open) {
-    if (!sidebar || !menuBtn) return;
-    sidebar.classList.toggle("open", open);
+    if (!topbar || !menuBtn) return;
+    topbar.classList.toggle("open", open);
     menuBtn.setAttribute("aria-expanded", String(open));
     menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   }
-  if (menuBtn) menuBtn.addEventListener("click", function () { setMenu(!sidebar.classList.contains("open")); });
-  $$(".side-nav a, .side-links a").forEach(function (a) {
+  if (menuBtn) menuBtn.addEventListener("click", function () { setMenu(!topbar.classList.contains("open")); });
+  $$(".tabs a").forEach(function (a) {
     a.addEventListener("click", function () { setMenu(false); });
   });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
 
   /* ---------- reading progress ---------- */
   var bar = $("#progress");
@@ -69,12 +70,13 @@
   }, { passive: true });
   updateProgress();
 
-  /* ---------- scroll spy ---------- */
-  var navLinks = $$(".side-nav a");
-  var sections = navLinks.map(function (a) { return $(a.getAttribute("href")); }).filter(Boolean);
-  function setActive(id) {
+  /* ---------- scroll spy (tabs follow the section in view) ---------- */
+  var navLinks = $$(".tabs a");
+  var sections = $$("main section[id]");
+  function tabOf(sec) { return sec.getAttribute("data-tab") || sec.id; }
+  function setActive(tab) {
     navLinks.forEach(function (a) {
-      var on = a.getAttribute("href") === "#" + id;
+      var on = a.getAttribute("href") === "#" + tab;
       a.classList.toggle("is-active", on);
       if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
     });
@@ -84,30 +86,12 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0; });
       var best = null, bestVal = 0;
-      sections.forEach(function (s) { if ((visible[s.id] || 0) > bestVal) { best = s.id; bestVal = visible[s.id]; } });
-      if (best) setActive(best);
-    }, { rootMargin: "-15% 0px -55% 0px", threshold: [0, 0.1, 0.4, 1] });
+      sections.forEach(function (s) { if ((visible[s.id] || 0) > bestVal) { best = s; bestVal = visible[s.id]; } });
+      if (best) setActive(tabOf(best));
+    }, { rootMargin: "-12% 0px -55% 0px", threshold: [0, 0.1, 0.4, 1] });
     sections.forEach(function (s) { io.observe(s); });
   }
-  setActive("about");
-
-  /* ---------- rotating phrase ---------- */
-  var rot = $("#rotator");
-  if (rot && !reduceMotion) {
-    var words = (rot.getAttribute("data-words") || "").split("|").filter(Boolean);
-    var i = 0;
-    if (words.length > 1) {
-      setInterval(function () {
-        if (document.hidden) return;
-        rot.classList.add("is-out");
-        setTimeout(function () {
-          i = (i + 1) % words.length;
-          rot.textContent = words[i];
-          rot.classList.remove("is-out");
-        }, 260);
-      }, 2600);
-    }
-  }
+  setActive("top");
 
   /* ---------- project filters ---------- */
   var chips = $$(".filters .chip");
@@ -243,7 +227,7 @@
 
   function buildItems() {
     items = [];
-    $$(".side-nav a").forEach(function (a) {
+    $$(".tabs a").forEach(function (a) {
       items.push({ label: a.textContent.trim(), kind: "Section", run: function () { go(a.getAttribute("href")); } });
     });
     $$("#projectList .project").forEach(function (p) {
@@ -253,7 +237,10 @@
     items.push({ label: "Copy email address", kind: "Action", run: function () { copyText("sapkotaganesh2058@gmail.com"); } });
     items.push({ label: "Open LinkedIn", kind: "Action", run: function () { window.open("https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/", "_blank", "noopener"); } });
     items.push({ label: "Switch theme", kind: "Action", run: toggleTheme });
+    items.push({ label: "Scheduling demo (operations research)", kind: "Section", run: function () { go("#sched"); } });
     items.push({ label: "MSc thesis: production scheduling", kind: "Section", run: function () { go("#education"); } });
+    items.push({ label: "How I work", kind: "Section", run: function () { go("#method"); } });
+    items.push({ label: "Awards", kind: "Section", run: function () { go("#awards"); } });
     items.push({ label: "Erasmus in Thessaloniki", kind: "Section", run: function () { go("#p-erasmus"); } });
   }
   function go(hash) {
@@ -324,6 +311,72 @@
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); openPalette(); }
     else if (e.key === "/" && !typing && !e.ctrlKey && !e.metaKey) { e.preventDefault(); openPalette(); }
   });
+
+  /* ---------- operations-research demo: single-machine scheduling ---------- */
+  (function () {
+    var root = $("#sched");
+    if (!root) return;
+    var jobs = [
+      { id: "J1", p: 4, d: 9 },
+      { id: "J2", p: 2, d: 12 },
+      { id: "J3", p: 6, d: 8 },
+      { id: "J4", p: 3, d: 20 },
+      { id: "J5", p: 5, d: 15 }
+    ];
+    var total = jobs.reduce(function (a, j) { return a + j.p; }, 0);
+    var notes = {
+      fifo: "First in, first out runs jobs in the order they arrive. It is simple and easy to explain, but it ignores job length and due dates.",
+      spt: "Shortest job first gets short jobs out early, which gives the lowest average completion time. Long jobs wait, so they can run late.",
+      edd: "Earliest due date first orders jobs by deadline. It minimises the largest lateness and is the natural rule when due dates matter most."
+    };
+    var names = { fifo: "First in, first out", spt: "Shortest job first", edd: "Earliest due date" };
+    var gantt = $("#gantt"), axis = $("#ganttAxis");
+    var bars = {};
+    jobs.forEach(function (j) {
+      var el = document.createElement("div");
+      el.className = "bar-job";
+      el.style.width = (j.p / total * 100) + "%";
+      bars[j.id] = el;
+      gantt.appendChild(el);
+    });
+    for (var t = 0; t <= total; t += 5) {
+      var sp = document.createElement("span");
+      sp.textContent = t; sp.style.left = (t / total * 100) + "%";
+      axis.appendChild(sp);
+    }
+    function order(rule) {
+      var list = jobs.slice();
+      if (rule === "spt") list.sort(function (a, b) { return a.p - b.p || a.d - b.d; });
+      else if (rule === "edd") list.sort(function (a, b) { return a.d - b.d || a.p - b.p; });
+      return list;
+    }
+    function run(rule) {
+      var list = order(rule), clock = 0, flow = 0, tard = 0, late = 0;
+      list.forEach(function (j) {
+        var start = clock; clock += j.p;
+        var l = Math.max(0, clock - j.d);
+        flow += clock; tard += l; if (l > 0) late++;
+        var el = bars[j.id];
+        el.style.left = (start / total * 100) + "%";
+        el.classList.toggle("late", l > 0);
+        el.innerHTML = j.id + "<small>" + (l > 0 ? "late " + l + " h" : "on time") + "</small>";
+      });
+      $("#mFlow").textContent = (flow / list.length).toFixed(1) + " h";
+      $("#mTard").textContent = tard + " h";
+      $("#mLate").textContent = late + " of " + list.length;
+      $("#ruleNote").textContent = notes[rule];
+      $("#sequence").textContent = "Order: " + list.map(function (j) { return j.id; }).join(", ");
+      $$("[data-rule]", root).forEach(function (b) {
+        var on = b.getAttribute("data-rule") === rule;
+        b.classList.toggle("is-on", on);
+        b.setAttribute("aria-pressed", String(on));
+      });
+    }
+    $$("[data-rule]", root).forEach(function (b) {
+      b.addEventListener("click", function () { run(b.getAttribute("data-rule")); });
+    });
+    run("fifo");
+  })();
 
   /* ---------- footer year ---------- */
   var yr = $("#year");
