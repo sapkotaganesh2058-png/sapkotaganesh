@@ -224,7 +224,8 @@ p { margin: 0 0 1rem; max-width: 66ch; }
 /* intro */
 
 .field-photo { margin: 2.2rem 0 0; }
-.field-photo img { width: 100%; height: auto; max-width: 560px; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); }
+.field-photo a { display: block; }
+.field-photo img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); }
 figcaption { font-family: var(--sans); font-size: .85rem; color: var(--muted); margin-top: .5rem; }
 
 .focus-list { margin: 0; padding: 0; list-style: none; display: grid; gap: .9rem; }
