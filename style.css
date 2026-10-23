@@ -294,7 +294,7 @@ main{overflow:clip}
 .research-interests{display:grid;grid-template-columns:160px 1fr;gap:34px;margin-top:74px;padding-top:30px;border-top:1px solid var(--line)}
 .research-interests>span{font-family:"DM Mono";font-size:9px;text-transform:uppercase;color:var(--green)}
 .research-interests>div{display:flex;flex-wrap:wrap;gap:9px}
-.research-interests a{padding:9px 12px;border:1px solid var(--line);border-radius:999px;font-size:11px;background:rgba(255,255,255,.55)}
+.research-interests>div>span{padding:9px 12px;border:1px solid var(--line);border-radius:999px;font-size:11px;background:rgba(255,255,255,.55)}
 
 .toolkit-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:88px}
 .tool-groups{border-top:1px solid var(--line)}
