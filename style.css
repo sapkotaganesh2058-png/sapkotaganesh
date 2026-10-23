@@ -476,3 +476,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--green);outline-offs
 
 @media(min-width:901px){.project--gallery-reverse .project-gallery{order:2}.project--gallery-reverse .project-body{order:1}}
 .project.reveal.visible:hover,.focus-card.reveal.visible:hover{transform:translateY(-6px)}
+
+/* Thesis details and exchange gallery */
+.thesis-card>p:not(.card-label){color:#a9b9b0;font-size:13px;line-height:1.75}
+.thesis-points{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.14)}
+.thesis-points li{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.14);color:#a9b9b0;font-size:13px;line-height:1.65}
+.thesis-points strong{display:block;margin-bottom:3px;color:#fff;font-size:13px}
+.thesis-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.thesis-tags span{padding:7px 10px;border:1px solid rgba(201,239,118,.28);border-radius:999px;color:var(--acid);font:9px "DM Mono",monospace;text-transform:uppercase}
+.exchange-grid{margin-top:56px}
