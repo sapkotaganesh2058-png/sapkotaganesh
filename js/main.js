@@ -250,7 +250,6 @@
     items.push({ label: "Copy email address", kind: "Action", run: function () { copyText("sapkotaganesh2058@gmail.com"); } });
     items.push({ label: "Open LinkedIn", kind: "Action", run: function () { window.open("https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/", "_blank", "noopener"); } });
     items.push({ label: "Switch theme", kind: "Action", run: toggleTheme });
-    items.push({ label: "Scheduling demo (operations research)", kind: "Section", run: function () { go("#sched"); } });
     items.push({ label: "MSc thesis: production scheduling", kind: "Section", run: function () { go("#education"); } });
     items.push({ label: "How I work", kind: "Section", run: function () { go("#method"); } });
     items.push({ label: "Awards", kind: "Section", run: function () { go("#awards"); } });
@@ -324,72 +323,6 @@
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); openPalette(); }
     else if (e.key === "/" && !typing && !e.ctrlKey && !e.metaKey) { e.preventDefault(); openPalette(); }
   });
-
-  /* ---------- operations-research demo: single-machine scheduling ---------- */
-  (function () {
-    var root = $("#sched");
-    if (!root) return;
-    var jobs = [
-      { id: "J1", p: 4, d: 9 },
-      { id: "J2", p: 2, d: 12 },
-      { id: "J3", p: 6, d: 8 },
-      { id: "J4", p: 3, d: 20 },
-      { id: "J5", p: 5, d: 15 }
-    ];
-    var total = jobs.reduce(function (a, j) { return a + j.p; }, 0);
-    var notes = {
-      fifo: "First in, first out runs jobs in the order they arrive. It is simple and easy to explain, but it ignores job length and due dates.",
-      spt: "Shortest job first gets short jobs out early, which gives the lowest average completion time. Long jobs wait, so they can run late.",
-      edd: "Earliest due date first orders jobs by deadline. It minimises the largest lateness and is the natural rule when due dates matter most."
-    };
-    var names = { fifo: "First in, first out", spt: "Shortest job first", edd: "Earliest due date" };
-    var gantt = $("#gantt"), axis = $("#ganttAxis");
-    var bars = {};
-    jobs.forEach(function (j) {
-      var el = document.createElement("div");
-      el.className = "bar-job";
-      el.style.width = (j.p / total * 100) + "%";
-      bars[j.id] = el;
-      gantt.appendChild(el);
-    });
-    for (var t = 0; t <= total; t += 5) {
-      var sp = document.createElement("span");
-      sp.textContent = t; sp.style.left = (t / total * 100) + "%";
-      axis.appendChild(sp);
-    }
-    function order(rule) {
-      var list = jobs.slice();
-      if (rule === "spt") list.sort(function (a, b) { return a.p - b.p || a.d - b.d; });
-      else if (rule === "edd") list.sort(function (a, b) { return a.d - b.d || a.p - b.p; });
-      return list;
-    }
-    function run(rule) {
-      var list = order(rule), clock = 0, flow = 0, tard = 0, late = 0;
-      list.forEach(function (j) {
-        var start = clock; clock += j.p;
-        var l = Math.max(0, clock - j.d);
-        flow += clock; tard += l; if (l > 0) late++;
-        var el = bars[j.id];
-        el.style.left = (start / total * 100) + "%";
-        el.classList.toggle("late", l > 0);
-        el.innerHTML = j.id + "<small>" + (l > 0 ? "late " + l + " h" : "on time") + "</small>";
-      });
-      $("#mFlow").textContent = (flow / list.length).toFixed(1) + " h";
-      $("#mTard").textContent = tard + " h";
-      $("#mLate").textContent = late + " of " + list.length;
-      $("#ruleNote").textContent = notes[rule];
-      $("#sequence").textContent = "Order: " + list.map(function (j) { return j.id; }).join(", ");
-      $$("[data-rule]", root).forEach(function (b) {
-        var on = b.getAttribute("data-rule") === rule;
-        b.classList.toggle("is-on", on);
-        b.setAttribute("aria-pressed", String(on));
-      });
-    }
-    $$("[data-rule]", root).forEach(function (b) {
-      b.addEventListener("click", function () { run(b.getAttribute("data-rule")); });
-    });
-    run("fifo");
-  })();
 
   /* ---------- footer year ---------- */
   var yr = $("#year");

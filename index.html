@@ -73,7 +73,7 @@
       if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="css/style.css?v=20261024-7">
+  <link rel="stylesheet" href="css/style.css?v=20261024-8">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -129,7 +129,6 @@
           </ul>
           <div class="hero-cta">
             <a class="btn btn--dark btn--lg" href="#projects">View my work</a>
-            <a class="btn btn--lg" href="#operations-research">Try the scheduling demo</a>
             <a class="btn btn--lg" href="assets/cv/Ganesh_Sapkota_CV.pdf?v=20261024-4" download="Ganesh_Sapkota_CV.pdf">Download CV</a>
           </div>
           <p class="hero-meta">Pulchowk Campus, IOE, Tribhuvan University · Nepal · on Erasmus in Thessaloniki, Greece</p>
@@ -214,39 +213,6 @@
         </div>
         <p class="or-tools">Tools: Excel, Oracle Crystal Ball, FINPLAN, LEAP and Python.</p>
 
-        <div class="demo js-only" id="sched" aria-labelledby="h-demo">
-          <h3 id="h-demo">Try it: sequence five jobs on one machine</h3>
-          <p class="demo-note">Pick a rule and watch the schedule change. The jobs are made up, not thesis data.</p>
-
-          <div class="rules" role="group" aria-label="Dispatching rule">
-            <button type="button" class="chip is-on" data-rule="fifo" aria-pressed="true">First in, first out</button>
-            <button type="button" class="chip" data-rule="spt" aria-pressed="false">Shortest job first</button>
-            <button type="button" class="chip" data-rule="edd" aria-pressed="false">Earliest due date</button>
-          </div>
-
-          <div class="gantt" id="gantt" aria-hidden="true"></div>
-          <div class="gantt-axis" id="ganttAxis" aria-hidden="true"></div>
-
-          <dl class="metrics" id="metrics" aria-live="polite">
-            <div><dt>Average completion time</dt><dd id="mFlow">-</dd></div>
-            <div><dt>Total lateness</dt><dd id="mTard">-</dd></div>
-            <div><dt>Jobs finished late</dt><dd id="mLate">-</dd></div>
-          </dl>
-          <p class="rule-note" id="ruleNote"></p>
-          <p class="sequence" id="sequence"></p>
-
-          <table class="jobs">
-            <caption>The five jobs (time in hours)</caption>
-            <thead><tr><th scope="col">Job</th><th scope="col">Processing time</th><th scope="col">Due at</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">J1</th><td>4</td><td>9</td></tr>
-              <tr><th scope="row">J2</th><td>2</td><td>12</td></tr>
-              <tr><th scope="row">J3</th><td>6</td><td>8</td></tr>
-              <tr><th scope="row">J4</th><td>3</td><td>20</td></tr>
-              <tr><th scope="row">J5</th><td>5</td><td>15</td></tr>
-            </tbody>
-          </table>
-        </div>
       </section>
 
       <section id="experience" aria-labelledby="h-exp">
@@ -718,6 +684,6 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <noscript><p class="noscript">This site works without JavaScript; search, theme switching and the photo viewer are turned off.</p></noscript>
-  <script src="js/main.js?v=20261024-7"></script>
+  <script src="js/main.js?v=20261024-8"></script>
 </body>
 </html>
