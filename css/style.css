@@ -225,6 +225,12 @@ p { margin: 0 0 1rem; max-width: 66ch; }
 
 .field-photo { margin: 2.2rem 0 0; }
 .field-photo a { display: block; }
+.photo-pair { display: grid; grid-template-columns: 1.7fr 1fr; gap: 1rem; margin-top: 2.2rem; align-items: stretch; }
+.photo-pair .field-photo { margin: 0; display: flex; flex-direction: column; }
+.photo-pair .field-photo a { flex: 1; }
+.photo-pair .field-photo img { height: 100%; aspect-ratio: auto; min-height: 260px; }
+.field-photo--tall img { object-position: 50% 28%; }
+@media (max-width: 560px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair .field-photo img { height: auto; aspect-ratio: 3 / 2; } .field-photo--tall img { aspect-ratio: 4 / 5 !important; } }
 .field-photo img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; border: 1px solid var(--rule); }
 figcaption { font-family: var(--sans); font-size: .85rem; color: var(--muted); margin-top: .5rem; }
 

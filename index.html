@@ -73,7 +73,7 @@
       if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="css/style.css?v=20261024-6">
+  <link rel="stylesheet" href="css/style.css?v=20261024-7">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -146,30 +146,31 @@
       <section id="about" data-tab="top" aria-labelledby="h-about">
         <h2 id="h-about">About</h2>
         <p class="lead">
-          I am a Mechanical Engineer with a growing focus on operations research, currently pursuing an MSc in Renewable Energy Engineering at
-          Pulchowk Campus, Institute of Engineering, Tribhuvan University.
+          Mechanical engineer focused on operations research. MSc in Renewable Energy Engineering at Pulchowk Campus, Tribhuvan University.
         </p>
         <p>
-          My work spans production scheduling, optimization and mathematical modelling, alongside municipal energy planning, industrial and institutional energy audits,
-          greenhouse-gas projection, carbon-footprint assessment, carbon-finance research and technical reporting.
+          I work on production scheduling, energy planning and audits, GHG accounting and carbon finance.
         </p>
-        <p>
-          I am most interested in assignments where analysis has to connect with real
-          operating conditions, policy constraints, economics and implementation decisions.
-        </p>
+        
 
-        <figure class="field-photo">
-          <a href="assets/images/profile/solar-field-hd.webp" data-lightbox="solar" data-caption="Ganesh Sapkota during a renewable-energy field visit at a solar site"><img src="assets/images/profile/solar-field-hd.webp" width="1600" height="1066" alt="Ganesh Sapkota during a renewable-energy field visit at a solar site" loading="lazy" decoding="async"></a>
-          <figcaption>On a renewable-energy field visit at a solar site. Select the photo to enlarge it.</figcaption>
-        </figure>
+        <div class="photo-pair">
+          <figure class="field-photo">
+            <a href="assets/images/profile/solar-field-hd.webp" data-lightbox="about" data-caption="Field visit at a solar site"><img src="assets/images/profile/solar-field-hd.webp" width="1600" height="1066" alt="Ganesh Sapkota during a renewable-energy field visit at a solar site" loading="lazy" decoding="async"></a>
+            <figcaption>Solar site visit</figcaption>
+          </figure>
+          <figure class="field-photo field-photo--tall">
+            <a href="assets/images/profile/mountain.webp" data-lightbox="about" data-caption="In the hills, with the Himalaya behind"><img src="assets/images/profile/mountain.webp" width="1200" height="1594" alt="Ganesh Sapkota in a grey jacket and sunglasses with snow mountains behind him" loading="lazy" decoding="async"></a>
+            <figcaption>In the hills</figcaption>
+          </figure>
+        </div>
 
         <h3 class="h-sub">Areas of practice</h3>
         <ul class="focus-list">
-          <li><strong>Operations research.</strong> Production scheduling, optimization, scenario and decision analysis, spreadsheet and simulation modelling.</li>
-          <li><strong>Energy systems.</strong> Renewable energy assessment, energy planning, demand analysis, scenario modelling and low-carbon technology evaluation.</li>
-          <li><strong>Efficiency and audits.</strong> Field measurements, equipment assessment, energy-use diagnostics, conservation measures, savings and payback analysis.</li>
-          <li><strong>Carbon and climate.</strong> GHG inventories, emission projections, MRV concepts, carbon pricing, Article 6 and carbon-finance research.</li>
-          <li><strong>Engineering design.</strong> 3D modelling, prototyping, technical drawings and technical documentation.</li>
+          <li><strong>Operations research.</strong> Scheduling, optimization, scenario analysis.</li>
+          <li><strong>Energy systems.</strong> Renewable energy, planning, demand analysis.</li>
+          <li><strong>Efficiency and audits.</strong> Field measurements, savings and payback.</li>
+          <li><strong>Carbon and climate.</strong> GHG inventories, projections, carbon finance.</li>
+          <li><strong>Engineering design.</strong> 3D modelling, prototyping, drawings.</li>
         </ul>
       </section>
 
@@ -178,7 +179,7 @@
         <ul class="now-list">
           <li>
             <span class="now-k">Studying</span>
-            <span>Erasmus Programme at Aristotle University of Thessaloniki, Greece, while continuing my MSc in Renewable Energy Engineering.</span>
+            <span>Erasmus at Aristotle University of Thessaloniki, Greece.</span>
           </li>
           <li>
             <span class="now-k">Thesis</span>
@@ -186,7 +187,7 @@
           </li>
           <li>
             <span class="now-k">Working</span>
-            <span>Mechanical Engineer at Multiscope Solution Pvt. Ltd. on energy planning, audits and carbon-finance assignments.</span>
+            <span>Mechanical Engineer at Multiscope Solution Pvt. Ltd.</span>
           </li>
         </ul>
       </section>
@@ -194,29 +195,28 @@
       <section id="operations-research" aria-labelledby="h-or">
         <h2 id="h-or">Operations research</h2>
         <p class="lead">
-          Operations research is the thread that connects my work: describe a decision as a model, state the constraints,
-          compare the alternatives with data, then choose.
+          Model the decision, state the constraints, compare alternatives with data, then choose.
         </p>
 
         <div class="or-grid">
           <article>
             <h3>Production scheduling</h3>
-            <p>My MSc thesis is a case study of production scheduling in an aluminium profile manufacturing industry.</p>
+            <p>MSc thesis on an aluminium profile factory.</p>
           </article>
           <article>
             <h3>Scenario and decision analysis</h3>
-            <p>Energy and GHG projections to 2030 under BAU, low, medium and high intervention scenarios, compared on demand, emissions and cost.</p>
+            <p>Energy and GHG projections to 2030 under four scenarios.</p>
           </article>
           <article>
             <h3>Optimization and economics</h3>
-            <p>Energy-audit measures ranked by savings and payback, and energy-system optimization as a research interest.</p>
+            <p>Audit measures ranked by savings and payback.</p>
           </article>
         </div>
         <p class="or-tools">Tools: Excel, Oracle Crystal Ball, FINPLAN, LEAP and Python.</p>
 
         <div class="demo js-only" id="sched" aria-labelledby="h-demo">
           <h3 id="h-demo">Try it: sequence five jobs on one machine</h3>
-          <p class="demo-note">Choose a dispatching rule and watch the schedule and the numbers change. The five jobs are made up for illustration and are not data from my thesis.</p>
+          <p class="demo-note">Pick a rule and watch the schedule change. The jobs are made up, not thesis data.</p>
 
           <div class="rules" role="group" aria-label="Dispatching rule">
             <button type="button" class="chip is-on" data-rule="fifo" aria-pressed="true">First in, first out</button>
@@ -258,14 +258,14 @@
             <span class="job-title"><strong>Mechanical Engineer</strong>, Multiscope Solution Pvt. Ltd.</span>
           </summary>
           <div class="job-body">
-            <p>Working across clean-energy, energy-efficiency and climate-related consulting assignments in Nepal.</p>
+            <p>Clean-energy and climate consulting in Nepal.</p>
             <ul>
-              <li>Municipal energy planning and field assessment of local energy-use patterns.</li>
-              <li>Energy-demand and GHG projections to 2030 under BAU, low, medium and high intervention scenarios.</li>
-              <li>LEAP, spreadsheet and SPSS-based modelling, data management and scenario analysis.</li>
-              <li>Industrial, commercial, residential and institutional energy-audit assignments.</li>
-              <li>Technical support to Nepal's National Carbon Finance Handbook, including policy and market review.</li>
-              <li>Workshops, FGDs, KIIs, validation processes, technical drafting and stakeholder-feedback integration.</li>
+              <li>Municipal energy planning and field assessments.</li>
+              <li>Energy and GHG projections to 2030.</li>
+              <li>Modelling in LEAP, Excel and SPSS.</li>
+              <li>Energy audits for industry, buildings and institutions.</li>
+              <li>Support to Nepal's National Carbon Finance Handbook.</li>
+              <li>Workshops, stakeholder consultation, technical drafting.</li>
             </ul>
             <ul class="chips"><li>LEAP</li><li>Energy audits</li><li>GHG scenarios</li><li>Carbon finance</li><li>SPSS</li><li>Technical reporting</li></ul>
             <figure class="inline-fig">
@@ -281,7 +281,7 @@
             <span class="job-title"><strong>Mechanical Engineering Intern</strong>, Ropeway Nepal Pvt. Ltd.</span>
           </summary>
           <div class="job-body">
-            <p>Contributed to mechanical design work for ropeway systems, including 3D modelling of gondola and chassis components and support to driving-mechanism design.</p>
+            <p>3D modelling of gondola and chassis components for ropeway systems.</p>
             <ul class="chips"><li>3D modelling</li><li>Mechanical design</li><li>CAD</li><li>Solid modelling</li></ul>
           </div>
         </details>
@@ -289,7 +289,7 @@
 
       <section id="projects" aria-labelledby="h-proj">
         <h2 id="h-proj">Selected projects</h2>
-        <p class="section-note">Energy, climate and engineering assignments with a clear analytical core. Select a photo to open the gallery.</p>
+        <p class="section-note">Select a photo to open the gallery.</p>
 
         <div class="filters" role="group" aria-label="Filter projects">
           <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All <span class="count">6</span></button>
@@ -306,9 +306,7 @@
             <div class="proj-body">
               <h3>Development of National Carbon Finance Handbook</h3>
               <p>
-                Technical support to a UNDP-supported national initiative coordinated with the Ministry of Forests and Environment.
-                Work included literature and policy review covering NDC 3.0, NAP, LTS, carbon-trade regulations, Article 6,
-                MRV guidance and national and international carbon-finance references.
+                Policy review for a UNDP-supported national initiative with the Ministry of Forests and Environment.
               </p>
               <dl class="tb">
                 <div><dt>Year</dt><dd>2025–2026</dd></div>
@@ -326,8 +324,7 @@
             <div class="proj-body">
               <h3>Carbon Footprint Assessment of Six Eye Hospitals in Nepal</h3>
               <p>
-                Facility-level GHG inventories covering electricity, diesel generators, vehicles, LPG, refrigerants,
-                anesthetic gases, solid waste and wastewater, followed by assessment of practical decarbonization measures.
+                GHG inventories for six hospitals, with practical decarbonization options.
               </p>
               <dl class="tb">
                 <div><dt>Year</dt><dd>2025–2026</dd></div>
@@ -358,7 +355,7 @@
             <div class="proj-body">
               <h3>Development of Municipal Energy Plans, Cluster 4</h3>
               <p>
-                Field assessment of municipal energy-use patterns, demand forecasting and GHG projection to 2030 under multiple intervention scenarios.
+                Field assessment, demand forecasting and GHG projection to 2030.
               </p>
               <dl class="tb">
                 <div><dt>Year</dt><dd>Professional assignment</dd></div>
@@ -376,8 +373,7 @@
             <div class="proj-body">
               <h3>Energy Audit of Madhyapur Aspatal Ltd.</h3>
               <p>
-                Detailed assessment of electrical energy consumption, equipment and operating practices in a 100-bed healthcare facility,
-                including field measurement, demand analysis, conservation measures and payback evaluation.
+                Electrical energy audit of a 100-bed hospital: measurements, savings and payback.
               </p>
               <dl class="tb">
                 <div><dt>Year</dt><dd>2026</dd></div>
@@ -406,7 +402,7 @@
             <div class="proj-body">
               <h3>Bamboo Panel Manufacturing Machine</h3>
               <p>
-                Designed and fabricated a machine for bamboo-panel production, developing 3D models and technical drawings and participating in prototype assembly, testing and refinement.
+                Designed and built a bamboo-panel machine, from 3D models to prototype testing.
               </p>
               <dl class="tb">
                 <div><dt>Year</dt><dd>Bachelor's thesis</dd></div>
@@ -437,7 +433,7 @@
             <div class="proj-body">
               <h3>Energy Audit Guidelines</h3>
               <p>
-                Contributed to WECS-supported energy-audit assignments and national reference documents for domestic appliances, industrial sectors, and commercial and residential sectors.
+                Contributed to WECS-supported national energy-audit reference documents.
               </p>
               <dl class="tb">
                 <div><dt>Year</dt><dd>2024–2025</dd></div>
@@ -458,7 +454,7 @@
 
       <section id="method" data-tab="operations-research" aria-labelledby="h-method">
         <h2 id="h-method">How I work</h2>
-        <p class="section-note">From field reality to a defensible engineering decision. My strongest work sits between site-level evidence and structured analysis.</p>
+        <p class="section-note">From site evidence to an engineering decision.</p>
 
         <div class="stepper" id="stepper">
           <div class="steps" role="tablist" aria-label="Working method">
@@ -469,19 +465,19 @@
           </div>
           <div class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
             <h3>Observe and measure</h3>
-            <p>Site visits, equipment inventories, bills, fuel records, surveys, real-time measurements and stakeholder consultation.</p>
+            <p>Site visits, measurements, bills and surveys.</p>
           </div>
           <div class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2">
             <h3>Structure the data</h3>
-            <p>Clean datasets, define baselines, identify assumptions and organize the evidence needed for modelling.</p>
+            <p>Clean the data and set baselines.</p>
           </div>
           <div class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3">
             <h3>Model scenarios</h3>
-            <p>Use spreadsheets, LEAP, SPSS and operations-research methods to compare demand, emissions, costs and interventions.</p>
+            <p>Compare demand, emissions and costs.</p>
           </div>
           <div class="panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4">
             <h3>Translate into action</h3>
-            <p>Turn analysis into technical recommendations, investment logic, policy inputs and implementation priorities.</p>
+            <p>Turn results into clear recommendations.</p>
           </div>
         </div>
       </section>
@@ -495,7 +491,7 @@
             <div>
               <img class="uni-logo uni-logo--auth" src="assets/images/logos/logo-auth.webp" width="640" height="208" alt="Aristotle University of Thessaloniki logo" loading="lazy" decoding="async">
               <h3>Erasmus Programme, Aristotle University of Thessaloniki</h3>
-              <p>Participating in the Erasmus Programme in Thessaloniki, Greece, while continuing my MSc in Renewable Energy Engineering.</p>
+              <p>Erasmus exchange in Thessaloniki, Greece.</p>
               <ul class="chips"><li>Student exchange</li><li>Thessaloniki, Greece</li><li>International study</li></ul>
             </div>
           </li>
@@ -522,7 +518,7 @@
         <aside class="thesis" aria-labelledby="thesis-h">
           <p class="thesis-k">MSc thesis</p>
           <h3 id="thesis-h">Production Scheduling for an Aluminium Profile Manufacturing Industry: A case study</h3>
-          <p>A case study of production scheduling in an aluminium profile manufacturing industry.</p>
+          
           <ul class="chips"><li>Production scheduling</li><li>Operations research</li><li>Manufacturing</li><li>Case study</li></ul>
         </aside>
 
@@ -534,8 +530,7 @@
           <div class="proj-body">
             <h3>Studying at Aristotle University of Thessaloniki</h3>
             <p>
-              I am spending part of my MSc journey at Aristotle University of Thessaloniki in Greece through the Erasmus Programme,
-              adding an international academic setting to my work on renewable energy, carbon markets and sustainable transport.
+              Erasmus exchange during my MSc.
             </p>
             <div class="thumbs" aria-label="Erasmus Programme photos, Thessaloniki">
               <a href="assets/images/erasmus/auth-sign.webp" data-lightbox="erasmus" data-caption="Ganesh Sapkota at the entrance sign of Aristotle University of Thessaloniki"><img src="assets/images/erasmus/auth-sign.webp" alt="Ganesh Sapkota at the entrance sign of Aristotle University of Thessaloniki" loading="lazy" decoding="async"></a>
@@ -562,7 +557,7 @@
 
       <section id="campus" data-tab="education" aria-labelledby="h-campus">
         <h2 id="h-campus">Life at Pulchowk Campus</h2>
-        <p class="section-note">Competitions, workshops and friends from my years at the Institute of Engineering, Pulchowk Campus. Select a photo to open the gallery.</p>
+        <p class="section-note">Select a photo to open the gallery.</p>
 
         <div class="project-list">
           <article class="project" id="p-gokart">
@@ -573,8 +568,7 @@
             <div class="proj-body">
               <h3>Go-Kart race winners, Mechtrix 2080</h3>
               <p>
-                Our Pulchowk Campus team won the national go-kart race at Mechtrix 2080, the 14th National Mechanical, Aerospace,
-                Automobile and Industrial Exhibition. The team collected the winners' prize on stage. The same national go-kart title also appears under Awards for 2079.
+                Our team won the national go-kart race at Mechtrix 2080.
               </p>
               <dl class="tb">
                 <div><dt>Event</dt><dd>Mechtrix 2080 national exhibition</dd></div>
@@ -597,11 +591,11 @@
             <div class="proj-body">
               <h3>Sports winner: tug of war, running and cricket</h3>
               <p>
-                Medals from my time at Pulchowk Campus for winning the tug of war, the running event and cricket.
+                Medals for tug of war, running and cricket.
               </p>
               <dl class="tb">
+                <div><dt>When</dt><dd>Sports week, early August 2026</dd></div>
                 <div><dt>Wins</dt><dd>Tug of war, running, cricket</dd></div>
-                <div><dt>Place</dt><dd>Pulchowk Campus, Institute of Engineering</dd></div>
               </dl>
               <div class="thumbs" aria-label="Sports winner photos">
                 <a href="assets/images/campus/sports/02.webp" data-lightbox="sports" data-caption="Ganesh Sapkota wearing his medals, standing with a friend in front of the campus building"><img src="assets/images/campus/sports/02.webp" alt="Ganesh Sapkota wearing his medals, standing with a friend in front of the campus building" loading="lazy" decoding="async"></a>
@@ -617,12 +611,11 @@
             <div class="proj-body">
               <h3>Hosting the M.Sc. Hostel welcome and farewell program</h3>
               <p>
-                M.Sc. hostel residents gathered in the Library Hall at Pulchowk Campus to welcome the new first-years and
-                say goodbye to the graduating seniors, and I hosted the program.
+                I hosted the welcome and farewell program on 10 August 2026.
               </p>
               <dl class="tb">
+                <div><dt>Date</dt><dd>10 August 2026</dd></div>
                 <div><dt>Role</dt><dd>Program host</dd></div>
-                <div><dt>Organiser</dt><dd>M.Sc. Hostel Committee</dd></div>
                 <div><dt>Venue</dt><dd>Library Hall, Pulchowk Campus</dd></div>
               </dl>
               <div class="thumbs" aria-label="Hostel program photos">
@@ -639,7 +632,7 @@
             <div class="proj-body">
               <h3>Graduation day at the Tribhuvan University convocation</h3>
               <p>
-                Receiving my Bachelor of Engineering certificate in Mechanical Engineering, together with friends and family.
+                Receiving my BE certificate in Mechanical Engineering.
               </p>
               <dl class="tb">
                 <div><dt>Occasion</dt><dd>University convocation</dd></div>
@@ -657,7 +650,6 @@
 
       <section id="toolkit" aria-labelledby="h-tool">
         <h2 id="h-tool">Toolkit</h2>
-        <p class="section-note">Tools I use to move from engineering data to clear analysis.</p>
         <dl class="tools">
           <div><dt>Modelling and analysis</dt><dd>Excel · LEAP · SPSS · Oracle Crystal Ball · FINPLAN · Python · C Programming</dd></div>
           <div><dt>Engineering and design</dt><dd>SolidWorks · AutoCAD · 3D modelling · technical drawings · prototyping</dd></div>
@@ -672,7 +664,7 @@
           <li><span>Mechtrix 2080</span><strong>Winner, National Go-Kart Competition</strong></li>
           <li><span>Mechtrix 2079</span><strong>Winner, National Go-Kart Competition</strong></li>
           <li><span>IOE Pulchowk, 2023</span><strong>Gold Medal, Inter-Department Football Tournament</strong></li>
-          <li><span>Pulchowk Campus sports</span><strong>Winner, tug of war, running and cricket</strong></li>
+          <li><span>Pulchowk sports week, Aug 2026</span><strong>Winner, tug of war, running and cricket</strong></li>
           <li><span>MSc programme</span><strong>Class Representative, Renewable Energy Engineering</strong></li>
         </ul>
       </section>
@@ -682,8 +674,7 @@
           <div>
             <h2 id="h-contact">Contact</h2>
             <p class="lead">
-              I am open to professional collaboration, technical assignments, research discussions and opportunities related to renewable energy,
-              energy efficiency, carbon finance and sustainable engineering.
+              Open to collaboration and technical assignments in energy, carbon finance and engineering.
             </p>
             <div class="contact-row">
               <a class="btn btn--solid" href="mailto:sapkotaganesh2058@gmail.com">Email me</a>
