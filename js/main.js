@@ -243,6 +243,8 @@
     });
     items.push({ label: "Go-kart win, Mechtrix 2080", kind: "Campus", run: function () { go("#p-gokart"); } });
     items.push({ label: "Life at Pulchowk Campus", kind: "Campus", run: function () { go("#campus"); } });
+    items.push({ label: "Sports winner: tug of war, running, cricket", kind: "Campus", run: function () { go("#p-sports"); } });
+    items.push({ label: "Hosting the M.Sc. Hostel program", kind: "Campus", run: function () { go("#p-hostel"); } });
     items.push({ label: "Graduation day", kind: "Campus", run: function () { go("#p-graduation"); } });
     items.push({ label: "Download CV", kind: "Action", run: function () { var a = document.createElement("a"); a.href = "assets/cv/Ganesh_Sapkota_CV.pdf?v=20261024-4"; a.download = "Ganesh_Sapkota_CV.pdf"; document.body.appendChild(a); a.click(); a.remove(); } });
     items.push({ label: "Copy email address", kind: "Action", run: function () { copyText("sapkotaganesh2058@gmail.com"); } });
