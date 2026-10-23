@@ -389,8 +389,6 @@ a.cover:hover img { transform: scale(1.04); }
 
 
 /* about */
-.about-grid { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 2rem; align-items: start; }
-.about-portrait { width: 200px; height: 200px; object-fit: cover; object-position: 50% 25%; border-radius: 26px 100px 26px 100px; border: 1px solid var(--rule-strong); }
 
 /* operations research */
 .or-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.6rem; }
@@ -506,8 +504,6 @@ dialog::backdrop { background: rgba(9, 16, 21, .6); backdrop-filter: blur(3px); 
   .page > section + section { margin-top: 3.6rem; }
   h2 { font-size: 1.55rem; }
   .bar-cv { display: none; }
-  .about-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-  .about-portrait { width: 150px; height: 150px; }
   .or-grid { grid-template-columns: 1fr; }
   .metrics { grid-template-columns: 1fr; }
   .demo { padding: 1.1rem; }
