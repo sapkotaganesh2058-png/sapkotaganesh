@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ganesh Sapkota | Mechanical Engineer · Renewable Energy</title>
-  <meta name="description" content="Portfolio of Ganesh Sapkota, a Mechanical Engineer and MSc Renewable Energy Engineering candidate working across energy efficiency, energy modelling, carbon finance, GHG accounting and low-carbon systems.">
-  <meta name="theme-color" content="#0b1511">
+  <meta name="description" content="Portfolio of Ganesh Sapkota, a Mechanical Engineer and MSc Renewable Energy Engineering candidate working across energy efficiency, energy modelling, carbon finance, GHG accounting, production scheduling and low-carbon systems.">
+  <meta name="theme-color" content="#f2f5f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d171d" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Ganesh Sapkota | Mechanical Engineer · Renewable Energy">
   <meta property="og:description" content="Engineering, energy and climate work grounded in field evidence and analytical modelling.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sapkotaganesh.com.np/">
-  <meta property="og:image" content="https://sapkotaganesh.com.np/assets/solar-main.webp">
+  <meta property="og:image" content="https://sapkotaganesh.com.np/assets/images/profile/solar-field.webp">
   <meta property="og:image:alt" content="Ganesh Sapkota during a renewable-energy field visit at a solar site">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ganesh Sapkota | Mechanical Engineer · Renewable Energy">
   <meta name="twitter:description" content="Engineering, energy and climate work grounded in field evidence and analytical modelling.">
-  <meta name="twitter:image" content="https://sapkotaganesh.com.np/assets/solar-main.webp">
+  <meta name="twitter:image" content="https://sapkotaganesh.com.np/assets/images/profile/solar-field.webp">
   <link rel="canonical" href="https://sapkotaganesh.com.np/">
   <script type="application/ld+json">
   {
@@ -23,17 +24,23 @@
     "@type": "Person",
     "name": "Ganesh Sapkota",
     "url": "https://sapkotaganesh.com.np/",
-    "image": "https://sapkotaganesh.com.np/assets/solar-main.webp",
+    "image": "https://sapkotaganesh.com.np/assets/images/profile/solar-field.webp",
     "jobTitle": "Mechanical Engineer",
-    "description": "Mechanical Engineer and MSc Renewable Energy Engineering candidate working across energy efficiency, energy modelling, carbon finance, GHG accounting and low-carbon systems.",
+    "description": "Mechanical Engineer and MSc Renewable Energy Engineering candidate working across energy efficiency, energy modelling, carbon finance, GHG accounting, production scheduling and low-carbon systems.",
     "worksFor": {
       "@type": "Organization",
       "name": "Multiscope Solution Pvt. Ltd."
     },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Institute of Engineering, Pulchowk Campus, Tribhuvan University"
-    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Institute of Engineering, Pulchowk Campus, Tribhuvan University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Aristotle University of Thessaloniki"
+      }
+    ],
     "homeLocation": {
       "@type": "Country",
       "name": "Nepal"
@@ -46,6 +53,7 @@
       "GHG accounting",
       "Carbon finance",
       "Operations research",
+      "Production scheduling",
       "Sustainable transport"
     ],
     "sameAs": [
@@ -53,575 +61,498 @@
     ]
   }
   </script>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="style.css?v=20261024">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap" rel="stylesheet">
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261024-2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="#top" aria-label="Ganesh Sapkota home">
-      <span class="brand-mark">GS</span>
-      <span class="brand-name">Ganesh Sapkota</span>
-    </a>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head">
+        <a class="who" href="#about" aria-label="Ganesh Sapkota, back to the start">
+          <img class="portrait" src="assets/images/profile/portrait.webp" width="300" height="300" alt="Portrait of Ganesh Sapkota" decoding="async">
+          <span class="who-text">
+            <strong>Ganesh Sapkota</strong>
+            <span>Mechanical Engineer</span>
+          </span>
+        </a>
+        <div class="side-tools">
+          <button class="icon-btn" id="paletteBtn" type="button" aria-label="Search the site" title="Search (Ctrl K)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+          </button>
+          <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark theme" title="Switch theme">
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+          </button>
+          <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideBody">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
 
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav">
-      <span></span><span></span>
-    </button>
-
-    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-      <a href="#profile">Profile</a>
-      <a href="#experience">Experience</a>
-      <a href="#work">Selected work</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="header-link" href="mailto:sapkotaganesh2058@gmail.com">Email ↗</a>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> Mechanical Engineer · Renewable Energy Engineering</p>
-        <h1>
-          Engineering the transition from
-          <em>evidence</em> to
-          <em>action.</em>
-        </h1>
-        <p class="hero-lead">
-          I work at the intersection of renewable energy, energy efficiency, systems modelling,
-          operations research and carbon finance — translating field evidence into practical low-carbon solutions.
+      <div class="side-body" id="sideBody">
+        <p class="side-affil">MSc Renewable Energy Engineering<br>Pulchowk Campus, IOE, Tribhuvan University</p>
+        <p class="side-place">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.3"/></svg>
+          Nepal · on Erasmus in Thessaloniki, Greece
         </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">Explore my work <span>↓</span></a>
-          <a class="btn btn-outline" href="assets/Ganesh_Sapkota_CV.pdf" download="Ganesh_Sapkota_CV.pdf">Download CV <span>↓</span></a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        </div>
+        <nav class="side-nav" aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#now">Now</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#method">How I work</a>
+          <a href="#education">Education</a>
+          <a href="#toolkit">Toolkit</a>
+          <a href="#awards">Awards</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-        <div class="hero-facts" aria-label="Profile highlights">
-          <div>
-            <span class="fact-label">Based in</span>
-            <strong>Nepal</strong>
-          </div>
-          <div>
-            <span class="fact-label">Current role</span>
-            <strong>Mechanical Engineer</strong>
-          </div>
-          <div>
-            <span class="fact-label">Current study</span>
-            <strong>MSc Renewable Energy Engineering</strong>
-          </div>
+        <div class="side-links">
+          <a class="btn" href="assets/cv/Ganesh_Sapkota_CV.pdf" download="Ganesh_Sapkota_CV.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19.5h14"/></svg>
+            Download CV
+          </a>
+          <a class="text-link" href="https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <button class="text-link" id="copyEmailSide" type="button" data-copy="sapkotaganesh2058@gmail.com">Copy email</button>
         </div>
+        <p class="side-hint"><kbd>Ctrl</kbd> <kbd>K</kbd> to jump anywhere</p>
       </div>
+    </aside>
 
-      <div class="hero-media reveal">
-        <figure class="hero-image magnetic" id="heroImage">
-          <img src="assets/solar-main.webp" alt="Ganesh Sapkota during a renewable-energy field visit at a solar site" fetchpriority="high" decoding="async">
-          <figcaption>
-            <span>Field exposure</span>
-            <strong>Renewable energy in practice</strong>
-          </figcaption>
+    <main id="main">
+      <section class="intro" id="about" aria-labelledby="name">
+        <h1 id="name">Ganesh Sapkota</h1>
+        <p class="tagline">Mechanical engineer working on <span class="rotator" id="rotator" data-words="energy planning|energy audits|GHG accounting|carbon finance|production scheduling">energy planning</span>.</p>
+
+        <p class="lead">
+          I am a Mechanical Engineer currently pursuing an MSc in Renewable Energy Engineering at
+          Pulchowk Campus, Institute of Engineering, Tribhuvan University.
+        </p>
+        <p>
+          My work spans municipal energy planning, industrial and institutional energy audits,
+          greenhouse-gas projection, carbon-footprint assessment, carbon-finance research,
+          mathematical modelling, optimization and technical reporting.
+        </p>
+        <p>
+          I am most interested in assignments where engineering analysis has to connect with real
+          operating conditions, policy constraints, economics and implementation decisions.
+        </p>
+
+        <figure class="field-photo">
+          <img src="assets/images/profile/solar-field.webp" width="600" height="400" alt="Ganesh Sapkota during a renewable-energy field visit at a solar site" fetchpriority="high" decoding="async">
+          <figcaption>On a renewable-energy field visit at a solar site.</figcaption>
         </figure>
 
-        <div class="hero-card hero-card--top">
-          <span>Current focus</span>
-          <strong>Energy systems · Carbon finance · Sustainable transport</strong>
+        <h2 class="h-sub">Areas of practice</h2>
+        <ul class="focus-list">
+          <li><strong>Energy systems.</strong> Renewable energy assessment, energy planning, demand analysis, scenario modelling and low-carbon technology evaluation.</li>
+          <li><strong>Efficiency and audits.</strong> Field measurements, equipment assessment, energy-use diagnostics, conservation measures, savings and payback analysis.</li>
+          <li><strong>Carbon and climate.</strong> GHG inventories, emission projections, MRV concepts, carbon pricing, Article 6 and carbon-finance research.</li>
+          <li><strong>Optimization and design.</strong> Operations research, production scheduling, spreadsheet modelling, engineering design, 3D modelling, prototyping and technical documentation.</li>
+        </ul>
+      </section>
+
+      <section id="now" aria-labelledby="h-now">
+        <h2 id="h-now">Now</h2>
+        <ul class="now-list">
+          <li>
+            <span class="now-k">Studying</span>
+            <span>Erasmus Programme at Aristotle University of Thessaloniki, Greece, while continuing my MSc in Renewable Energy Engineering.</span>
+          </li>
+          <li>
+            <span class="now-k">Thesis</span>
+            <span><em>Production Scheduling for an Aluminium Profile Manufacturing Industry: A case study.</em></span>
+          </li>
+          <li>
+            <span class="now-k">Working</span>
+            <span>Mechanical Engineer at Multiscope Solution Pvt. Ltd. on energy planning, audits and carbon-finance assignments.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="experience" aria-labelledby="h-exp">
+        <h2 id="h-exp">Experience</h2>
+
+        <details class="job" open>
+          <summary>
+            <span class="job-date">Nov 2024 – Present</span>
+            <span class="job-title"><strong>Mechanical Engineer</strong>, Multiscope Solution Pvt. Ltd.</span>
+          </summary>
+          <div class="job-body">
+            <p>Working across clean-energy, energy-efficiency and climate-related consulting assignments in Nepal.</p>
+            <ul>
+              <li>Municipal energy planning and field assessment of local energy-use patterns.</li>
+              <li>Energy-demand and GHG projections to 2030 under BAU, low, medium and high intervention scenarios.</li>
+              <li>LEAP, spreadsheet and SPSS-based modelling, data management and scenario analysis.</li>
+              <li>Industrial, commercial, residential and institutional energy-audit assignments.</li>
+              <li>Technical support to Nepal's National Carbon Finance Handbook, including policy and market review.</li>
+              <li>Workshops, FGDs, KIIs, validation processes, technical drafting and stakeholder-feedback integration.</li>
+            </ul>
+            <ul class="chips"><li>LEAP</li><li>Energy audits</li><li>GHG scenarios</li><li>Carbon finance</li><li>SPSS</li><li>Technical reporting</li></ul>
+            <figure class="inline-fig">
+              <a href="assets/images/workshops/carbon-project-workshop.webp" data-lightbox="workshop" data-caption="Workshop presentation on formulating a Verra standard carbon project"><img src="assets/images/workshops/carbon-project-workshop.webp" alt="Workshop presentation on formulating a Verra standard carbon project" loading="lazy" decoding="async"></a>
+              <figcaption>Carbon project workshop</figcaption>
+            </figure>
+          </div>
+        </details>
+
+        <details class="job">
+          <summary>
+            <span class="job-date">Oct – Dec 2023</span>
+            <span class="job-title"><strong>Mechanical Engineering Intern</strong>, Ropeway Nepal Pvt. Ltd.</span>
+          </summary>
+          <div class="job-body">
+            <p>Contributed to mechanical design work for ropeway systems, including 3D modelling of gondola and chassis components and support to driving-mechanism design.</p>
+            <ul class="chips"><li>3D modelling</li><li>Mechanical design</li><li>CAD</li><li>Solid modelling</li></ul>
+          </div>
+        </details>
+      </section>
+
+      <section id="projects" aria-labelledby="h-proj">
+        <h2 id="h-proj">Selected projects</h2>
+        <p class="section-note">Energy, climate and engineering assignments with a clear analytical core. Select a photo to open the gallery.</p>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All <span class="count">6</span></button>
+          <button type="button" class="chip" data-filter="carbon" aria-pressed="false">Carbon and climate <span class="count">2</span></button>
+          <button type="button" class="chip" data-filter="energy" aria-pressed="false">Energy planning and audits <span class="count">3</span></button>
+          <button type="button" class="chip" data-filter="design" aria-pressed="false">Mechanical design <span class="count">1</span></button>
         </div>
 
-        <div class="hero-card hero-card--bottom">
-          <span>Approach</span>
-          <strong>Field data → modelling → decisions</strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="signal-strip" aria-label="Areas of practice">
-      <div class="signal-track">
-        <span>Renewable energy</span><i>•</i>
-        <span>Energy efficiency</span><i>•</i>
-        <span>GHG accounting</span><i>•</i>
-        <span>Carbon finance</span><i>•</i>
-        <span>Energy modelling</span><i>•</i>
-        <span>Operations research</span><i>•</i>
-        <span>Mechanical design</span><i>•</i>
-        <span>Sustainable transport</span><i>•</i>
-      </div>
-    </section>
-
-    <section class="section intro" id="profile">
-      <div class="section-label reveal">
-        <span>01</span>
-        <p>Profile</p>
-      </div>
-      <div class="intro-grid">
-        <div class="intro-title reveal">
-          <h2>Mechanical foundation.<br>Energy-systems perspective.</h2>
-        </div>
-        <div class="intro-copy reveal">
-          <p class="large-copy">
-            I am a Mechanical Engineer currently pursuing an MSc in Renewable Energy Engineering at
-            Pulchowk Campus, Institute of Engineering, Tribhuvan University.
-          </p>
-          <p>
-            My work spans municipal energy planning, industrial and institutional energy audits,
-            greenhouse-gas projection, carbon-footprint assessment, carbon-finance research,
-            mathematical modelling, optimization and technical reporting.
-          </p>
-          <p>
-            I am most interested in assignments where engineering analysis has to connect with real
-            operating conditions, policy constraints, economics and implementation decisions.
-          </p>
-        </div>
-      </div>
-
-      <div class="focus-grid">
-        <article class="focus-card reveal">
-          <span class="focus-no">A</span>
-          <h3>Energy systems</h3>
-          <p>Renewable energy assessment, energy planning, demand analysis, scenario modelling and low-carbon technology evaluation.</p>
-        </article>
-        <article class="focus-card reveal">
-          <span class="focus-no">B</span>
-          <h3>Efficiency & audits</h3>
-          <p>Field measurements, equipment assessment, energy-use diagnostics, conservation measures, savings and payback analysis.</p>
-        </article>
-        <article class="focus-card reveal">
-          <span class="focus-no">C</span>
-          <h3>Carbon & climate</h3>
-          <p>GHG inventories, emission projections, MRV concepts, carbon pricing, Article 6 and carbon-finance research.</p>
-        </article>
-        <article class="focus-card reveal">
-          <span class="focus-no">D</span>
-          <h3>Optimization & design</h3>
-          <p>Operations research, spreadsheet modelling, engineering design, 3D modelling, prototyping and technical documentation.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section dark-section" id="experience">
-      <div class="section-label section-label--light reveal">
-        <span>02</span>
-        <p>Experience</p>
-      </div>
-
-      <div class="section-heading reveal">
-        <h2>Professional work shaped by field data, analysis and multidisciplinary delivery.</h2>
-      </div>
-
-      <div class="experience-list">
-        <article class="experience-row reveal">
-          <div class="experience-date">Nov 2024 — Present</div>
-          <div class="experience-main">
-            <p class="role-kicker">Mechanical Engineer</p>
-            <h3>Multiscope Solution Pvt. Ltd.</h3>
-            <p class="experience-summary">
-              Working across clean-energy, energy-efficiency and climate-related consulting assignments in Nepal.
-            </p>
-            <div class="experience-columns">
-              <ul>
-                <li>Municipal energy planning and field assessment of local energy-use patterns.</li>
-                <li>Energy-demand and GHG projections to 2030 under BAU, low, medium and high intervention scenarios.</li>
-                <li>LEAP, spreadsheet and SPSS-based modelling, data management and scenario analysis.</li>
-              </ul>
-              <ul>
-                <li>Industrial, commercial, residential and institutional energy-audit assignments.</li>
-                <li>Technical support to Nepal's National Carbon Finance Handbook, including policy and market review.</li>
-                <li>Workshops, FGDs, KIIs, validation processes, technical drafting and stakeholder-feedback integration.</li>
-              </ul>
-            </div>
-            <div class="tag-row">
-              <span>LEAP</span><span>Energy audits</span><span>GHG scenarios</span><span>Carbon finance</span><span>SPSS</span><span>Technical reporting</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="experience-row reveal">
-          <div class="experience-date">Oct — Dec 2023</div>
-          <div class="experience-main">
-            <p class="role-kicker">Mechanical Engineering Intern</p>
-            <h3>Ropeway Nepal Pvt. Ltd.</h3>
-            <p class="experience-summary">
-              Contributed to mechanical design work for ropeway systems, including 3D modelling of gondola and chassis components and support to driving-mechanism design.
-            </p>
-            <div class="tag-row">
-              <span>3D modelling</span><span>Mechanical design</span><span>CAD</span><span>Solid modelling</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section work-section" id="work">
-      <div class="section-label reveal">
-        <span>03</span>
-        <p>Selected work</p>
-      </div>
-
-      <div class="work-intro">
-        <div class="section-heading reveal">
-          <h2>Energy, climate and engineering assignments with a clear analytical core.</h2>
-        </div>
-        <p class="work-note reveal">Selected projects from professional and academic work.</p>
-      </div>
-
-      <div class="project-grid">
-        <article class="project project--wide reveal">
-          <div class="project-media">
-            <img src="assets/carbon-handbook.webp" alt="Ganesh Sapkota participating in a carbon finance handbook workshop" loading="lazy" decoding="async">
-          </div>
-          <div class="project-body">
-            <div class="project-meta"><span>Carbon finance</span><span>2025–2026</span></div>
-            <h3>Development of National Carbon Finance Handbook</h3>
-            <p>
-              Technical support to a UNDP-supported national initiative coordinated with the Ministry of Forests and Environment.
-              Work included literature and policy review covering NDC 3.0, NAP, LTS, carbon-trade regulations, Article 6,
-              MRV guidance and national/international carbon-finance references.
-            </p>
-            <div class="project-footer"><span>Policy review</span><span>MRV</span><span>Article 6</span><span>Stakeholder engagement</span></div>
-          </div>
-        </article>
-
-        <article class="project project--gallery reveal">
-          <div class="project-gallery" aria-label="Eye hospital carbon footprint assessment photo gallery">
-            <a class="project-feature" href="assets/carbon-assessment-06.webp" target="_blank" rel="noopener" aria-label="Open featured carbon assessment photograph"><img src="assets/carbon-assessment-06.webp" alt="Sorting and characterizing hospital waste" loading="lazy" decoding="async"></a>
-            <div class="project-thumbnails">
-              <a href="assets/carbon-assessment-01.webp" target="_blank" rel="noopener" aria-label="Open carbon assessment photo 1"><img src="assets/carbon-assessment-01.webp" alt="Checking electrical infrastructure at a hospital" loading="lazy" decoding="async"></a>
-              <a href="assets/carbon-assessment-02.webp" target="_blank" rel="noopener" aria-label="Open carbon assessment photo 2"><img src="assets/carbon-assessment-02.webp" alt="Field observation of hospital grounds" loading="lazy" decoding="async"></a>
-              <a href="assets/carbon-assessment-03.webp" target="_blank" rel="noopener" aria-label="Open carbon assessment photo 3"><img src="assets/carbon-assessment-03.webp" alt="Carbon assessment team at a hospital site" loading="lazy" decoding="async"></a>
-              <a href="assets/carbon-assessment-04.webp" target="_blank" rel="noopener" aria-label="Open carbon assessment photo 4"><img src="assets/carbon-assessment-04.webp" alt="Collecting field data at the hospital" loading="lazy" decoding="async"></a>
-              <a href="assets/carbon-assessment-05.webp" target="_blank" rel="noopener" aria-label="Open carbon assessment photo 5"><img src="assets/carbon-assessment-05.webp" alt="Interviewing hospital staff for activity data" loading="lazy" decoding="async"></a>
-              <a href="assets/carbon-assessment-06.webp" target="_blank" rel="noopener" aria-label="Open carbon assessment photo 6"><img src="assets/carbon-assessment-06.webp" alt="Sorting and characterizing hospital waste" loading="lazy" decoding="async"></a>
-              <a href="assets/carbon-assessment-07.webp" target="_blank" rel="noopener" aria-label="Open carbon assessment photo 7"><img src="assets/carbon-assessment-07.webp" alt="Examining segregated hospital waste" loading="lazy" decoding="async"></a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta"><span>GHG accounting</span><span>2025–2026</span></div>
-            <h3>Carbon Footprint Assessment of Six Eye Hospitals in Nepal</h3>
-            <p>
-              Facility-level GHG inventories covering electricity, diesel generators, vehicles, LPG, refrigerants,
-              anesthetic gases, solid waste and wastewater, followed by assessment of practical decarbonization measures.
-            </p>
-            <div class="project-footer"><span>GHG inventory</span><span>Activity data</span><span>Decarbonization</span></div>
-          </div>
-        </article>
-
-        <article class="project project--plan reveal">
-          <div class="plan-visual" aria-label="Municipal energy planning: field data, LEAP scenarios, and demand and emissions forecasts">
-            <div class="plan-visual-head"><span>Municipal energy planning</span><span>01 / 03</span></div>
-            <div class="plan-flow">
-              <div><span>01</span><strong>Field data</strong><small>Fuel use · demand</small></div>
-              <div><span>02</span><strong>LEAP scenarios</strong><small>BAU · interventions</small></div>
-              <div><span>03</span><strong>Projections</strong><small>Energy · emissions</small></div>
-            </div>
-            <div class="plan-visual-foot"><span>Baseline</span><i aria-hidden="true"></i><span>2030 outlook</span></div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta"><span>Energy planning</span><span>Professional</span></div>
-            <h3>Development of Municipal Energy Plans — Cluster 4</h3>
-            <p>
-              Field assessment of municipal energy-use patterns, demand forecasting and GHG projection to 2030 under multiple intervention scenarios.
-            </p>
-            <div class="project-footer"><span>LEAP</span><span>Forecasting</span><span>Scenario analysis</span></div>
-          </div>
-        </article>
-
-        <article class="project project--gallery project--gallery-reverse reveal">
-          <div class="project-gallery" aria-label="Energy audit photo gallery">
-            <a class="project-feature" href="assets/energy-audit-09.webp" target="_blank" rel="noopener" aria-label="Open featured Energy audit photograph"><img src="assets/energy-audit-09.webp" alt="Field team measuring electrical equipment" loading="lazy" decoding="async"></a>
-            <div class="project-thumbnails">
-              <a href="assets/energy-audit-01.webp" target="_blank" rel="noopener" aria-label="Open Energy audit photo 1"><img src="assets/energy-audit-01.webp" alt="Electrical measurement and field notes" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-02.webp" target="_blank" rel="noopener" aria-label="Open Energy audit photo 2"><img src="assets/energy-audit-02.webp" alt="Building exterior during an energy audit visit" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-03.webp" target="_blank" rel="noopener" aria-label="Open Energy audit photo 3"><img src="assets/energy-audit-03.webp" alt="Measuring an electrical outlet" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-04.webp" target="_blank" rel="noopener" aria-label="Open Energy audit photo 4"><img src="assets/energy-audit-04.webp" alt="Checking kitchen equipment and fuel use" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-09.webp" target="_blank" rel="noopener" aria-label="Open Energy audit photo 9"><img src="assets/energy-audit-09.webp" alt="Field team measuring electrical equipment" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-10.webp" target="_blank" rel="noopener" aria-label="Open Energy audit photo 10"><img src="assets/energy-audit-10.webp" alt="Electrical measurement during the audit" loading="lazy" decoding="async"></a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta"><span>Energy efficiency</span><span>2026</span></div>
-            <h3>Energy Audit of Madhyapur Aspatal Ltd.</h3>
-            <p>
-              Detailed assessment of electrical energy consumption, equipment and operating practices in a 100-bed healthcare facility,
-              including field measurement, demand analysis, conservation measures and payback evaluation.
-            </p>
-            <div class="project-footer"><span>Field measurements</span><span>Demand analysis</span><span>Payback</span></div>
-          </div>
-        </article>
-
-        <article class="project project--gallery reveal">
-          <div class="project-gallery" aria-label="Bamboo panel manufacturing machine photo gallery">
-            <a class="project-feature" href="assets/bamboo-thesis-06.webp" target="_blank" rel="noopener" aria-label="Open photograph of the bamboo panel machine">
-              <img src="assets/bamboo-thesis-06.webp" alt="Complete bamboo panel manufacturing machine outdoors" loading="lazy" decoding="async">
+        <div class="project-list" id="projectList">
+          <article class="project" id="p-handbook" data-cat="carbon" data-title="National Carbon Finance Handbook">
+            <a class="cover" href="assets/images/projects/carbon-finance-handbook/validation-workshop.webp" data-lightbox="handbook" data-caption="Ganesh Sapkota participating in a carbon finance handbook workshop">
+              <img src="assets/images/projects/carbon-finance-handbook/validation-workshop.webp" alt="Ganesh Sapkota participating in a carbon finance handbook workshop" loading="lazy" decoding="async">
             </a>
-            <div class="project-thumbnails">
-              <a href="assets/bamboo-thesis-01.webp" target="_blank" rel="noopener" aria-label="Open photo 1 of bamboo panel thesis"><img src="assets/bamboo-thesis-01.webp" alt="Finished bamboo panel, front view" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-02.webp" target="_blank" rel="noopener" aria-label="Open photo 2 of bamboo panel thesis"><img src="assets/bamboo-thesis-02.webp" alt="Press mechanism close-up" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-03.webp" target="_blank" rel="noopener" aria-label="Open photo 3 of bamboo panel thesis"><img src="assets/bamboo-thesis-03.webp" alt="Press mechanism during demonstration" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-04.webp" target="_blank" rel="noopener" aria-label="Open photo 4 of bamboo panel thesis"><img src="assets/bamboo-thesis-04.webp" alt="Prototype press under inspection" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-05.webp" target="_blank" rel="noopener" aria-label="Open photo 5 of bamboo panel thesis"><img src="assets/bamboo-thesis-05.webp" alt="Press platform and frame" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-06.webp" target="_blank" rel="noopener" aria-label="Open photo 6 of bamboo panel thesis"><img src="assets/bamboo-thesis-06.webp" alt="Complete bamboo panel manufacturing machine outdoors" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-07.webp" target="_blank" rel="noopener" aria-label="Open photo 7 of bamboo panel thesis"><img src="assets/bamboo-thesis-07.webp" alt="Complete machine viewed from the side" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-08.webp" target="_blank" rel="noopener" aria-label="Open photo 8 of bamboo panel thesis"><img src="assets/bamboo-thesis-08.webp" alt="Finished bamboo panel, edge view" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-09.webp" target="_blank" rel="noopener" aria-label="Open photo 9 of bamboo panel thesis"><img src="assets/bamboo-thesis-09.webp" alt="Machine viewed from above" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-10.webp" target="_blank" rel="noopener" aria-label="Open photo 10 of bamboo panel thesis"><img src="assets/bamboo-thesis-10.webp" alt="Assembled machine at the workshop" loading="lazy" decoding="async"></a>
-              <a href="assets/bamboo-thesis-11.webp" target="_blank" rel="noopener" aria-label="Open photo 11 of bamboo panel thesis"><img src="assets/bamboo-thesis-11.webp" alt="Machine frame and production bed viewed from above" loading="lazy" decoding="async"></a>
+            <div class="proj-body">
+              <h3>Development of National Carbon Finance Handbook</h3>
+              <p>
+                Technical support to a UNDP-supported national initiative coordinated with the Ministry of Forests and Environment.
+                Work included literature and policy review covering NDC 3.0, NAP, LTS, carbon-trade regulations, Article 6,
+                MRV guidance and national and international carbon-finance references.
+              </p>
+              <dl class="tb">
+                <div><dt>Year</dt><dd>2025–2026</dd></div>
+                <div><dt>Field</dt><dd>Carbon finance</dd></div>
+                <div><dt>Methods</dt><dd>Policy review, MRV, Article 6, stakeholder engagement</dd></div>
+              </dl>
             </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta"><span>Mechanical design</span><span>Bachelor's thesis</span></div>
-            <h3>Bamboo Panel Manufacturing Machine</h3>
-            <p>
-              Designed and fabricated a machine for bamboo-panel production, developing 3D models and technical drawings and participating in prototype assembly, testing and refinement.
-            </p>
-            <div class="project-footer"><span>SolidWorks</span><span>Fabrication</span><span>Prototype testing</span></div>
-          </div>
-        </article>
+          </article>
 
-        <article class="project project--gallery project--gallery-reverse reveal">
-          <div class="project-gallery" aria-label="Energy audit guidelines photo gallery">
-            <a class="project-feature" href="assets/energy-audit-06.webp" target="_blank" rel="noopener" aria-label="Open featured Energy audit guidelines photograph"><img src="assets/energy-audit-06.webp" alt="Presentation during the energy audit guideline workshop" loading="lazy" decoding="async"></a>
-            <div class="project-thumbnails">
-              <a href="assets/energy-audit-05.webp" target="_blank" rel="noopener" aria-label="Open Energy audit guidelines photo 5"><img src="assets/energy-audit-05.webp" alt="Energy audit guideline workshop discussion" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-06.webp" target="_blank" rel="noopener" aria-label="Open Energy audit guidelines photo 6"><img src="assets/energy-audit-06.webp" alt="Presentation during the energy audit guideline workshop" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-07.webp" target="_blank" rel="noopener" aria-label="Open Energy audit guidelines photo 7"><img src="assets/energy-audit-07.webp" alt="Workshop participants discussing the presentation" loading="lazy" decoding="async"></a>
-              <a href="assets/energy-audit-08.webp" target="_blank" rel="noopener" aria-label="Open Energy audit guidelines photo 8"><img src="assets/energy-audit-08.webp" alt="Presentation to stakeholders on energy audit guidelines" loading="lazy" decoding="async"></a>
+          <article class="project" id="p-hospitals" data-cat="carbon" data-title="Carbon Footprint Assessment of Six Eye Hospitals">
+            <a class="cover" href="assets/images/projects/eye-hospitals/06.webp" data-lightbox="hospitals" data-caption="Sorting and characterizing hospital waste">
+              <img src="assets/images/projects/eye-hospitals/06.webp" alt="Sorting and characterizing hospital waste" loading="lazy" decoding="async">
+              <span class="badge">7 photos</span>
+            </a>
+            <div class="proj-body">
+              <h3>Carbon Footprint Assessment of Six Eye Hospitals in Nepal</h3>
+              <p>
+                Facility-level GHG inventories covering electricity, diesel generators, vehicles, LPG, refrigerants,
+                anesthetic gases, solid waste and wastewater, followed by assessment of practical decarbonization measures.
+              </p>
+              <dl class="tb">
+                <div><dt>Year</dt><dd>2025–2026</dd></div>
+                <div><dt>Field</dt><dd>GHG accounting</dd></div>
+                <div><dt>Methods</dt><dd>GHG inventory, activity data, decarbonization options</dd></div>
+              </dl>
+              <div class="thumbs" aria-label="Eye hospital carbon footprint assessment photos">
+                <a href="assets/images/projects/eye-hospitals/01.webp" data-lightbox="hospitals" data-caption="Checking electrical infrastructure at a hospital"><img src="assets/images/projects/eye-hospitals/01.webp" alt="Checking electrical infrastructure at a hospital" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/eye-hospitals/02.webp" data-lightbox="hospitals" data-caption="Field observation of hospital grounds"><img src="assets/images/projects/eye-hospitals/02.webp" alt="Field observation of hospital grounds" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/eye-hospitals/03.webp" data-lightbox="hospitals" data-caption="Carbon assessment team at a hospital site"><img src="assets/images/projects/eye-hospitals/03.webp" alt="Carbon assessment team at a hospital site" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/eye-hospitals/04.webp" data-lightbox="hospitals" data-caption="Collecting field data at the hospital"><img src="assets/images/projects/eye-hospitals/04.webp" alt="Collecting field data at the hospital" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/eye-hospitals/05.webp" data-lightbox="hospitals" data-caption="Interviewing hospital staff for activity data"><img src="assets/images/projects/eye-hospitals/05.webp" alt="Interviewing hospital staff for activity data" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/eye-hospitals/06.webp" data-lightbox="hospitals" data-caption="Sorting and characterizing hospital waste"><img src="assets/images/projects/eye-hospitals/06.webp" alt="Sorting and characterizing hospital waste" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/eye-hospitals/07.webp" data-lightbox="hospitals" data-caption="Examining segregated hospital waste"><img src="assets/images/projects/eye-hospitals/07.webp" alt="Examining segregated hospital waste" loading="lazy" decoding="async"></a>
+              </div>
             </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta"><span>Reference documents</span><span>2024–2025</span></div>
-            <h3>Energy Audit Guidelines</h3>
-            <p>
-              Contributed to WECS-supported energy-audit assignments and national reference documents for domestic appliances, industrial sectors, and commercial and residential sectors.
-            </p>
-            <div class="project-footer"><span>Energy audit</span><span>Guidelines</span><span>Technical documentation</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
+          </article>
 
-    <section class="section method-section">
-      <div class="section-label reveal">
-        <span>04</span>
-        <p>How I work</p>
-      </div>
+          <article class="project" id="p-municipal" data-cat="energy" data-title="Municipal Energy Plans, Cluster 4">
+            <div class="cover diagram" role="img" aria-label="Municipal energy planning: field data, LEAP scenarios, and demand and emissions projections">
+              <ol>
+                <li><strong>Field data</strong><span>Fuel use, demand</span></li>
+                <li><strong>LEAP scenarios</strong><span>BAU, interventions</span></li>
+                <li><strong>Projections</strong><span>Energy, emissions</span></li>
+              </ol>
+              <div class="axis"><span>Baseline</span><i aria-hidden="true"></i><span>2030 outlook</span></div>
+            </div>
+            <div class="proj-body">
+              <h3>Development of Municipal Energy Plans, Cluster 4</h3>
+              <p>
+                Field assessment of municipal energy-use patterns, demand forecasting and GHG projection to 2030 under multiple intervention scenarios.
+              </p>
+              <dl class="tb">
+                <div><dt>Year</dt><dd>Professional assignment</dd></div>
+                <div><dt>Field</dt><dd>Energy planning</dd></div>
+                <div><dt>Methods</dt><dd>LEAP, forecasting, scenario analysis</dd></div>
+              </dl>
+            </div>
+          </article>
 
-      <div class="method-grid">
-        <div class="method-title reveal">
-          <h2>From field reality to a defensible engineering decision.</h2>
-          <p>My strongest work sits between site-level evidence and structured analysis.</p>
+          <article class="project" id="p-audit" data-cat="energy" data-title="Energy Audit of Madhyapur Aspatal Ltd.">
+            <a class="cover" href="assets/images/projects/energy-audit-madhyapur/05.webp" data-lightbox="audit" data-caption="Field team measuring electrical equipment">
+              <img src="assets/images/projects/energy-audit-madhyapur/05.webp" alt="Field team measuring electrical equipment" loading="lazy" decoding="async">
+              <span class="badge">6 photos</span>
+            </a>
+            <div class="proj-body">
+              <h3>Energy Audit of Madhyapur Aspatal Ltd.</h3>
+              <p>
+                Detailed assessment of electrical energy consumption, equipment and operating practices in a 100-bed healthcare facility,
+                including field measurement, demand analysis, conservation measures and payback evaluation.
+              </p>
+              <dl class="tb">
+                <div><dt>Year</dt><dd>2026</dd></div>
+                <div><dt>Field</dt><dd>Energy efficiency</dd></div>
+                <div><dt>Methods</dt><dd>Field measurements, demand analysis, payback</dd></div>
+              </dl>
+              <div class="thumbs" aria-label="Energy audit photos">
+                <a href="assets/images/projects/energy-audit-madhyapur/01.webp" data-lightbox="audit" data-caption="Electrical measurement and field notes"><img src="assets/images/projects/energy-audit-madhyapur/01.webp" alt="Electrical measurement and field notes" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-madhyapur/02.webp" data-lightbox="audit" data-caption="Building exterior during an energy audit visit"><img src="assets/images/projects/energy-audit-madhyapur/02.webp" alt="Building exterior during an energy audit visit" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-madhyapur/03.webp" data-lightbox="audit" data-caption="Measuring an electrical outlet"><img src="assets/images/projects/energy-audit-madhyapur/03.webp" alt="Measuring an electrical outlet" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-madhyapur/04.webp" data-lightbox="audit" data-caption="Checking kitchen equipment and fuel use"><img src="assets/images/projects/energy-audit-madhyapur/04.webp" alt="Checking kitchen equipment and fuel use" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-madhyapur/05.webp" data-lightbox="audit" data-caption="Field team measuring electrical equipment"><img src="assets/images/projects/energy-audit-madhyapur/05.webp" alt="Field team measuring electrical equipment" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-madhyapur/06.webp" data-lightbox="audit" data-caption="Electrical measurement during the audit"><img src="assets/images/projects/energy-audit-madhyapur/06.webp" alt="Electrical measurement during the audit" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="p-bamboo" data-cat="design" data-title="Bamboo Panel Manufacturing Machine">
+            <a class="cover" href="assets/images/projects/bamboo-machine/06.webp" data-lightbox="bamboo" data-caption="Complete bamboo panel manufacturing machine outdoors">
+              <img src="assets/images/projects/bamboo-machine/06.webp" alt="Complete bamboo panel manufacturing machine outdoors" loading="lazy" decoding="async">
+              <span class="badge">11 photos</span>
+            </a>
+            <div class="proj-body">
+              <h3>Bamboo Panel Manufacturing Machine</h3>
+              <p>
+                Designed and fabricated a machine for bamboo-panel production, developing 3D models and technical drawings and participating in prototype assembly, testing and refinement.
+              </p>
+              <dl class="tb">
+                <div><dt>Year</dt><dd>Bachelor's thesis</dd></div>
+                <div><dt>Field</dt><dd>Mechanical design</dd></div>
+                <div><dt>Methods</dt><dd>SolidWorks, fabrication, prototype testing</dd></div>
+              </dl>
+              <div class="thumbs" aria-label="Bamboo panel machine photos">
+                <a href="assets/images/projects/bamboo-machine/01.webp" data-lightbox="bamboo" data-caption="Finished bamboo panel, front view"><img src="assets/images/projects/bamboo-machine/01.webp" alt="Finished bamboo panel, front view" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/02.webp" data-lightbox="bamboo" data-caption="Press mechanism close-up"><img src="assets/images/projects/bamboo-machine/02.webp" alt="Press mechanism close-up" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/03.webp" data-lightbox="bamboo" data-caption="Press mechanism during demonstration"><img src="assets/images/projects/bamboo-machine/03.webp" alt="Press mechanism during demonstration" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/04.webp" data-lightbox="bamboo" data-caption="Prototype press under inspection"><img src="assets/images/projects/bamboo-machine/04.webp" alt="Prototype press under inspection" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/05.webp" data-lightbox="bamboo" data-caption="Press platform and frame"><img src="assets/images/projects/bamboo-machine/05.webp" alt="Press platform and frame" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/06.webp" data-lightbox="bamboo" data-caption="Complete bamboo panel manufacturing machine outdoors"><img src="assets/images/projects/bamboo-machine/06.webp" alt="Complete bamboo panel manufacturing machine outdoors" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/07.webp" data-lightbox="bamboo" data-caption="Complete machine viewed from the side"><img src="assets/images/projects/bamboo-machine/07.webp" alt="Complete machine viewed from the side" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/08.webp" data-lightbox="bamboo" data-caption="Finished bamboo panel, edge view"><img src="assets/images/projects/bamboo-machine/08.webp" alt="Finished bamboo panel, edge view" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/09.webp" data-lightbox="bamboo" data-caption="Machine viewed from above"><img src="assets/images/projects/bamboo-machine/09.webp" alt="Machine viewed from above" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/10.webp" data-lightbox="bamboo" data-caption="Assembled machine at the workshop"><img src="assets/images/projects/bamboo-machine/10.webp" alt="Assembled machine at the workshop" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/bamboo-machine/11.webp" data-lightbox="bamboo" data-caption="Machine frame and production bed viewed from above"><img src="assets/images/projects/bamboo-machine/11.webp" alt="Machine frame and production bed viewed from above" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="p-guidelines" data-cat="energy" data-title="Energy Audit Guidelines">
+            <a class="cover" href="assets/images/projects/energy-audit-guidelines/02.webp" data-lightbox="guidelines" data-caption="Presentation during the energy audit guideline workshop">
+              <img src="assets/images/projects/energy-audit-guidelines/02.webp" alt="Presentation during the energy audit guideline workshop" loading="lazy" decoding="async">
+              <span class="badge">4 photos</span>
+            </a>
+            <div class="proj-body">
+              <h3>Energy Audit Guidelines</h3>
+              <p>
+                Contributed to WECS-supported energy-audit assignments and national reference documents for domestic appliances, industrial sectors, and commercial and residential sectors.
+              </p>
+              <dl class="tb">
+                <div><dt>Year</dt><dd>2024–2025</dd></div>
+                <div><dt>Field</dt><dd>Reference documents</dd></div>
+                <div><dt>Methods</dt><dd>Energy audit, guidelines, technical documentation</dd></div>
+              </dl>
+              <div class="thumbs" aria-label="Energy audit guidelines workshop photos">
+                <a href="assets/images/projects/energy-audit-guidelines/01.webp" data-lightbox="guidelines" data-caption="Energy audit guideline workshop discussion"><img src="assets/images/projects/energy-audit-guidelines/01.webp" alt="Energy audit guideline workshop discussion" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-guidelines/02.webp" data-lightbox="guidelines" data-caption="Presentation during the energy audit guideline workshop"><img src="assets/images/projects/energy-audit-guidelines/02.webp" alt="Presentation during the energy audit guideline workshop" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-guidelines/03.webp" data-lightbox="guidelines" data-caption="Workshop participants discussing the presentation"><img src="assets/images/projects/energy-audit-guidelines/03.webp" alt="Workshop participants discussing the presentation" loading="lazy" decoding="async"></a>
+                <a href="assets/images/projects/energy-audit-guidelines/04.webp" data-lightbox="guidelines" data-caption="Presentation to stakeholders on energy audit guidelines"><img src="assets/images/projects/energy-audit-guidelines/04.webp" alt="Presentation to stakeholders on energy audit guidelines" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </article>
         </div>
+        <p class="empty" id="emptyMsg" hidden>No projects match this filter. Select "All" to see everything.</p>
+      </section>
 
-        <ol class="method-list">
-          <li class="reveal">
-            <span>01</span>
-            <div><h3>Observe & measure</h3><p>Site visits, equipment inventories, bills, fuel records, surveys, real-time measurements and stakeholder consultation.</p></div>
+      <section id="method" aria-labelledby="h-method">
+        <h2 id="h-method">How I work</h2>
+        <p class="section-note">From field reality to a defensible engineering decision. My strongest work sits between site-level evidence and structured analysis.</p>
+
+        <div class="stepper" id="stepper">
+          <div class="steps" role="tablist" aria-label="Working method">
+            <button type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true"><span class="n">1</span>Observe and measure</button>
+            <button type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1"><span class="n">2</span>Structure the data</button>
+            <button type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1"><span class="n">3</span>Model scenarios</button>
+            <button type="button" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1"><span class="n">4</span>Translate into action</button>
+          </div>
+          <div class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+            <h3>Observe and measure</h3>
+            <p>Site visits, equipment inventories, bills, fuel records, surveys, real-time measurements and stakeholder consultation.</p>
+          </div>
+          <div class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2">
+            <h3>Structure the data</h3>
+            <p>Clean datasets, define baselines, identify assumptions and organize the evidence needed for modelling.</p>
+          </div>
+          <div class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3">
+            <h3>Model scenarios</h3>
+            <p>Use spreadsheets, LEAP, SPSS and operations-research methods to compare demand, emissions, costs and interventions.</p>
+          </div>
+          <div class="panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4">
+            <h3>Translate into action</h3>
+            <p>Turn analysis into technical recommendations, investment logic, policy inputs and implementation priorities.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" aria-labelledby="h-edu">
+        <h2 id="h-edu">Education and research</h2>
+
+        <ol class="timeline">
+          <li>
+            <span class="t-date">2026 – Present</span>
+            <div>
+              <h3>Erasmus Programme, Aristotle University of Thessaloniki</h3>
+              <p>Participating in the Erasmus Programme in Thessaloniki, Greece, while continuing my MSc in Renewable Energy Engineering.</p>
+              <ul class="chips"><li>Student exchange</li><li>Thessaloniki, Greece</li><li>International study</li></ul>
+            </div>
           </li>
-          <li class="reveal">
-            <span>02</span>
-            <div><h3>Structure the data</h3><p>Clean datasets, define baselines, identify assumptions and organize the evidence needed for modelling.</p></div>
+          <li>
+            <span class="t-date">2025 – Present</span>
+            <div>
+              <h3>MSc Renewable Energy Engineering</h3>
+              <p>Pulchowk Campus, Institute of Engineering, Tribhuvan University</p>
+              <ul class="chips"><li>Energy systems</li><li>Energy efficiency</li><li>Energy planning</li><li>Carbon markets</li><li>Sustainable transport</li></ul>
+            </div>
           </li>
-          <li class="reveal">
-            <span>03</span>
-            <div><h3>Model scenarios</h3><p>Use spreadsheets, LEAP, SPSS and operations-research methods to compare demand, emissions, costs and interventions.</p></div>
-          </li>
-          <li class="reveal">
-            <span>04</span>
-            <div><h3>Translate into action</h3><p>Turn analysis into technical recommendations, investment logic, policy inputs and implementation priorities.</p></div>
+          <li>
+            <span class="t-date">2019 – 2024</span>
+            <div>
+              <h3>BEng Mechanical Engineering</h3>
+              <p>Pulchowk Campus, Institute of Engineering, Tribhuvan University</p>
+              <ul class="chips"><li>Operations research</li><li>Thermodynamics</li><li>Fluid mechanics</li><li>Machine design</li><li>Manufacturing</li></ul>
+            </div>
           </li>
         </ol>
-      </div>
-    </section>
 
-    <section class="gallery-section" aria-label="Field and stakeholder engagement">
-      <figure class="gallery-main reveal">
-        <img src="assets/workshop-seated.webp" alt="Stakeholder consultation and professional workshop" loading="lazy" decoding="async">
-        <figcaption><span>Field & engagement</span><strong>Working with evidence, people and implementation context.</strong></figcaption>
-      </figure>
-      <figure class="gallery-side reveal">
-        <img src="assets/workshop-listening.webp" alt="Workshop presentation on formulating a Verra standard carbon project" loading="lazy" decoding="async">
-        <figcaption>Carbon project workshop</figcaption>
-      </figure>
-      <figure class="gallery-side reveal">
-        <img src="assets/workshop-speaker.webp" alt="Professional technical presentation" loading="lazy" decoding="async">
-        <figcaption>Technical presentation</figcaption>
-      </figure>
-    </section>
-
-    <section class="section research-section" id="research">
-      <div class="section-label reveal">
-        <span>05</span>
-        <p>Education & research</p>
-      </div>
-
-      <div class="education-layout">
-        <div class="education-stack">
-          <article class="education-item reveal">
-            <div class="education-year">2026 — Present</div>
-            <div>
-              <p class="degree-type">Erasmus Programme</p>
-              <h3>Aristotle University of Thessaloniki</h3>
-              <p>Participating in the Erasmus Programme in Thessaloniki, Greece, while continuing my MSc in Renewable Energy Engineering.</p>
-              <div class="tag-row">
-                <span>Student exchange</span><span>Thessaloniki, Greece</span><span>International study</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="education-item reveal">
-            <div class="education-year">2025 — Present</div>
-            <div>
-              <p class="degree-type">Master of Science</p>
-              <h3>Renewable Energy Engineering</h3>
-              <p>Pulchowk Campus, Institute of Engineering, Tribhuvan University</p>
-              <div class="tag-row">
-                <span>Energy systems</span><span>Energy efficiency</span><span>Energy planning</span><span>Carbon markets</span><span>Sustainable transport</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="education-item reveal">
-            <div class="education-year">2019 — 2024</div>
-            <div>
-              <p class="degree-type">Bachelor of Engineering</p>
-              <h3>Mechanical Engineering</h3>
-              <p>Pulchowk Campus, Institute of Engineering, Tribhuvan University</p>
-              <div class="tag-row">
-                <span>Operations research</span><span>Thermodynamics</span><span>Fluid mechanics</span><span>Machine design</span><span>Manufacturing</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <aside class="thesis-card reveal">
-          <p class="card-label">MSc thesis</p>
-          <h3>Production Scheduling for an Aluminium Profile Manufacturing Industry: A case study</h3>
+        <aside class="thesis" aria-labelledby="thesis-h">
+          <p class="thesis-k">MSc thesis</p>
+          <h3 id="thesis-h">Production Scheduling for an Aluminium Profile Manufacturing Industry: A case study</h3>
           <p>A case study of production scheduling in an aluminium profile manufacturing industry.</p>
-          <div class="thesis-tags"><span>Production scheduling</span><span>Operations research</span><span>Manufacturing</span><span>Case study</span></div>
+          <ul class="chips"><li>Production scheduling</li><li>Operations research</li><li>Manufacturing</li><li>Case study</li></ul>
         </aside>
-      </div>
 
-      <div class="project-grid exchange-grid">
-        <article class="project project--gallery reveal">
-          <div class="project-gallery" aria-label="Erasmus Programme photo gallery, Thessaloniki">
-            <a class="project-feature" href="assets/erasmus-campus.webp" target="_blank" rel="noopener" aria-label="Open featured Erasmus photograph"><img src="assets/erasmus-campus.webp" alt="Ganesh Sapkota in front of campus buildings in Thessaloniki" loading="lazy" decoding="async"></a>
-            <div class="project-thumbnails">
-              <a href="assets/erasmus-auth-sign.webp" target="_blank" rel="noopener" aria-label="Open Erasmus photo 1"><img src="assets/erasmus-auth-sign.webp" alt="Ganesh Sapkota at the entrance sign of Aristotle University of Thessaloniki" loading="lazy" decoding="async"></a>
-              <a href="assets/erasmus-aristotle-square.webp" target="_blank" rel="noopener" aria-label="Open Erasmus photo 2"><img src="assets/erasmus-aristotle-square.webp" alt="Ganesh Sapkota beside the statue of Aristotle in Aristotelous Square, Thessaloniki" loading="lazy" decoding="async"></a>
-              <a href="assets/erasmus-campus.webp" target="_blank" rel="noopener" aria-label="Open Erasmus photo 3"><img src="assets/erasmus-campus.webp" alt="Ganesh Sapkota in front of campus buildings in Thessaloniki" loading="lazy" decoding="async"></a>
-              <a href="assets/erasmus-waterfront.webp" target="_blank" rel="noopener" aria-label="Open Erasmus photo 4"><img src="assets/erasmus-waterfront.webp" alt="Ganesh Sapkota on a wooden pier along the Thessaloniki waterfront" loading="lazy" decoding="async"></a>
-              <a href="assets/erasmus-seafront.webp" target="_blank" rel="noopener" aria-label="Open Erasmus photo 5"><img src="assets/erasmus-seafront.webp" alt="Ganesh Sapkota on the Thessaloniki seafront with a tall ship in the background" loading="lazy" decoding="async"></a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta"><span>Erasmus Programme</span><span>2026 — Present</span></div>
+        <article class="project" id="p-erasmus" data-static="1">
+          <a class="cover" href="assets/images/erasmus/campus.webp" data-lightbox="erasmus" data-caption="Ganesh Sapkota in front of campus buildings in Thessaloniki">
+            <img src="assets/images/erasmus/campus.webp" alt="Ganesh Sapkota in front of campus buildings in Thessaloniki" loading="lazy" decoding="async">
+            <span class="badge">5 photos</span>
+          </a>
+          <div class="proj-body">
             <h3>Studying at Aristotle University of Thessaloniki</h3>
             <p>
               I am spending part of my MSc journey at Aristotle University of Thessaloniki in Greece through the Erasmus Programme,
               adding an international academic setting to my work on renewable energy, carbon markets and sustainable transport.
             </p>
-            <div class="project-footer"><span>Thessaloniki, Greece</span><span>Student exchange</span><span>Academic mobility</span></div>
+            <div class="thumbs" aria-label="Erasmus Programme photos, Thessaloniki">
+              <a href="assets/images/erasmus/auth-sign.webp" data-lightbox="erasmus" data-caption="Ganesh Sapkota at the entrance sign of Aristotle University of Thessaloniki"><img src="assets/images/erasmus/auth-sign.webp" alt="Ganesh Sapkota at the entrance sign of Aristotle University of Thessaloniki" loading="lazy" decoding="async"></a>
+              <a href="assets/images/erasmus/aristotle-square.webp" data-lightbox="erasmus" data-caption="Ganesh Sapkota beside the statue of Aristotle in Aristotelous Square, Thessaloniki"><img src="assets/images/erasmus/aristotle-square.webp" alt="Ganesh Sapkota beside the statue of Aristotle in Aristotelous Square, Thessaloniki" loading="lazy" decoding="async"></a>
+              <a href="assets/images/erasmus/campus.webp" data-lightbox="erasmus" data-caption="Ganesh Sapkota in front of campus buildings in Thessaloniki"><img src="assets/images/erasmus/campus.webp" alt="Ganesh Sapkota in front of campus buildings in Thessaloniki" loading="lazy" decoding="async"></a>
+              <a href="assets/images/erasmus/waterfront.webp" data-lightbox="erasmus" data-caption="Ganesh Sapkota on a wooden pier along the Thessaloniki waterfront"><img src="assets/images/erasmus/waterfront.webp" alt="Ganesh Sapkota on a wooden pier along the Thessaloniki waterfront" loading="lazy" decoding="async"></a>
+              <a href="assets/images/erasmus/seafront.webp" data-lightbox="erasmus" data-caption="Ganesh Sapkota on the Thessaloniki seafront with a tall ship in the background"><img src="assets/images/erasmus/seafront.webp" alt="Ganesh Sapkota on the Thessaloniki seafront with a tall ship in the background" loading="lazy" decoding="async"></a>
+            </div>
           </div>
         </article>
-      </div>
 
-      <div class="research-interests reveal">
-        <span>Research interests</span>
-        <div>
-          <span>Renewable energy systems</span>
-          <span>Operations research</span>
-          <span>Energy efficiency</span>
-          <span>Electric mobility</span>
-          <span>Carbon markets</span>
-          <span>GHG accounting & MRV</span>
-          <span>Energy-system optimization</span>
-        </div>
-      </div>
-    </section>
+        <h3 class="h-sub">Research interests</h3>
+        <ul class="chips chips--lg">
+          <li>Renewable energy systems</li>
+          <li>Operations research</li>
+          <li>Production scheduling</li>
+          <li>Energy efficiency</li>
+          <li>Electric mobility</li>
+          <li>Carbon markets</li>
+          <li>GHG accounting and MRV</li>
+          <li>Energy-system optimization</li>
+        </ul>
+      </section>
 
-    <section class="section toolkit-section">
-      <div class="section-label reveal">
-        <span>06</span>
-        <p>Toolkit</p>
-      </div>
+      <section id="toolkit" aria-labelledby="h-tool">
+        <h2 id="h-tool">Toolkit</h2>
+        <p class="section-note">Tools I use to move from engineering data to clear analysis.</p>
+        <dl class="tools">
+          <div><dt>Modelling and analysis</dt><dd>Excel · LEAP · SPSS · Oracle Crystal Ball · FINPLAN · Python · C Programming</dd></div>
+          <div><dt>Engineering and design</dt><dd>SolidWorks · AutoCAD · 3D modelling · technical drawings · prototyping</dd></div>
+          <div><dt>Delivery</dt><dd>Technical reports · presentations · questionnaires · stakeholder materials · charts and tables</dd></div>
+        </dl>
+      </section>
 
-      <div class="toolkit-layout">
-        <div class="section-heading reveal">
-          <h2>Tools I use to move from engineering data to clear analysis.</h2>
-        </div>
-        <div class="tool-groups">
-          <div class="tool-group reveal">
-            <span>Modelling & analysis</span>
-            <p>Excel · LEAP · SPSS · Oracle Crystal Ball · FINPLAN · Python · C Programming</p>
-          </div>
-          <div class="tool-group reveal">
-            <span>Engineering & design</span>
-            <p>SolidWorks · AutoCAD · 3D modelling · technical drawings · prototyping</p>
-          </div>
-          <div class="tool-group reveal">
-            <span>Delivery</span>
-            <p>Technical reports · presentations · questionnaires · stakeholder materials · charts & tables</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section id="awards" aria-labelledby="h-awards">
+        <h2 id="h-awards">Awards and involvement</h2>
+        <ul class="awards">
+          <li><span>Mechtrix 2080</span><strong>2nd Runner-Up, BE Level 3D Design Hackathon</strong></li>
+          <li><span>Mechtrix 2080</span><strong>Winner, National Go-Kart Competition</strong></li>
+          <li><span>Mechtrix 2079</span><strong>Winner, National Go-Kart Competition</strong></li>
+          <li><span>IOE Pulchowk, 2023</span><strong>Gold Medal, Inter-Department Football Tournament</strong></li>
+          <li><span>MSc programme</span><strong>Class Representative, Renewable Energy Engineering</strong></li>
+        </ul>
+      </section>
 
-    <section class="section recognition-section">
-      <div class="section-label reveal">
-        <span>07</span>
-        <p>Recognition</p>
-      </div>
-
-      <div class="recognition-grid">
-        <div class="recognition-title reveal">
-          <h2>Selected awards & involvement.</h2>
-          <p>Academic, engineering and team-based recognition from IOE Pulchowk activities.</p>
-        </div>
-        <div class="award-list">
-          <div class="award-row reveal"><span>Mechtrix 2080</span><strong>2nd Runner-Up — BE Level 3D Design Hackathon</strong></div>
-          <div class="award-row reveal"><span>Mechtrix 2080</span><strong>Winner — National Go-Kart Competition</strong></div>
-          <div class="award-row reveal"><span>Mechtrix 2079</span><strong>Winner — National Go-Kart Competition</strong></div>
-          <div class="award-row reveal"><span>IOE Pulchowk · 2023</span><strong>Gold Medal — Inter-Department Football Tournament</strong></div>
-          <div class="award-row reveal"><span>MSc programme</span><strong>Class Representative — Renewable Energy Engineering</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="contact-orbit" aria-hidden="true"></div>
-      <div class="contact-inner reveal">
-        <p class="eyebrow eyebrow--light"><span></span> Contact</p>
-        <h2>Interested in energy, engineering or low-carbon systems?</h2>
-        <p>
+      <section id="contact" aria-labelledby="h-contact">
+        <h2 id="h-contact">Contact</h2>
+        <p class="lead">
           I am open to professional collaboration, technical assignments, research discussions and opportunities related to renewable energy,
           energy efficiency, carbon finance and sustainable engineering.
         </p>
-        <div class="contact-actions">
-          <a class="btn btn-light" href="mailto:sapkotaganesh2058@gmail.com">sapkotaganesh2058@gmail.com ↗</a>
-          <a class="btn btn-dark-outline" href="assets/Ganesh_Sapkota_CV.pdf" download="Ganesh_Sapkota_CV.pdf">Download CV ↓</a>
-          <a class="btn btn-dark-outline" href="https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <div class="contact-row">
+          <a class="btn btn--solid" href="mailto:sapkotaganesh2058@gmail.com">Email me</a>
+          <button class="btn" id="copyEmail" type="button" data-copy="sapkotaganesh2058@gmail.com">Copy address</button>
+          <a class="btn" href="assets/cv/Ganesh_Sapkota_CV.pdf" download="Ganesh_Sapkota_CV.pdf">Download CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </div>
-    </section>
-  </main>
+        <p class="mail-line">sapkotaganesh2058@gmail.com</p>
+      </section>
 
-  <footer class="site-footer">
-    <div>
-      <span class="brand-mark brand-mark--footer">GS</span>
-      <p>Ganesh Sapkota<br><small>Mechanical Engineer · Renewable Energy Engineering</small></p>
+      <footer class="site-footer">
+        <p>© <span id="year">2026</span> Ganesh Sapkota</p>
+        <a href="#about">Back to top</a>
+      </footer>
+    </main>
+  </div>
+
+  <dialog id="palette" aria-label="Search the site">
+    <div class="pal-box">
+      <input id="paletteInput" type="text" placeholder="Search sections, projects, actions" autocomplete="off" spellcheck="false" aria-label="Search" role="combobox" aria-expanded="true" aria-controls="paletteList">
+      <ul id="paletteList" role="listbox"></ul>
+      <p class="pal-foot"><kbd>↑</kbd> <kbd>↓</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
     </div>
-    <p>© <span id="year">2026</span> Ganesh Sapkota</p>
-    <a href="#top">Back to top ↑</a>
-  </footer>
+  </dialog>
 
-  <noscript><p class="noscript">This site works without JavaScript, but motion and navigation enhancements are disabled.</p></noscript>
-  <script src="script.js?v=20261024"></script>
+  <dialog id="lightbox" aria-label="Photo viewer">
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption><span id="lbCap"></span><span id="lbCount" class="lb-count"></span></figcaption>
+    </figure>
+    <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close viewer">×</button>
+    <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
+    <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next photo">›</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p class="noscript">This site works without JavaScript; search, theme switching and the photo viewer are turned off.</p></noscript>
+  <script src="js/main.js?v=20261024-2"></script>
 </body>
 </html>
