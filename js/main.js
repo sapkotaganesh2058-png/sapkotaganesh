@@ -242,6 +242,8 @@
       items.push({ label: p.getAttribute("data-title"), kind: "Project", run: function () { applyFilter("all"); go("#" + p.id); } });
     });
     items.push({ label: "Go-kart win, Mechtrix 2080", kind: "Campus", run: function () { go("#p-gokart"); } });
+    items.push({ label: "Final-year thesis: bamboo panel machine", kind: "Campus", run: function () { go("#p-bamboo"); } });
+    items.push({ label: "Suffosafe minor project", kind: "Campus", run: function () { go("#p-suffosafe"); } });
     items.push({ label: "Life at Pulchowk Campus", kind: "Campus", run: function () { go("#campus"); } });
     items.push({ label: "Sports winner: tug of war, running, cricket", kind: "Campus", run: function () { go("#p-sports"); } });
     items.push({ label: "Hosting the M.Sc. Hostel program", kind: "Campus", run: function () { go("#p-hostel"); } });
