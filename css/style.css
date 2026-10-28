@@ -118,6 +118,7 @@ kbd { font-family: var(--sans); font-size: .72rem; padding: .08rem .38rem; borde
 
 /* about, now */
 .field-photo { margin: 0; }
+.field-photo--solo { margin-top: 1.6rem; max-width: 760px; }
 .field-photo a { display: block; }
 .photo-pair { display: grid; grid-template-columns: 1.7fr 1fr; gap: 1rem; margin-top: 1.6rem; align-items: stretch; }
 .photo-pair .field-photo { display: flex; flex-direction: column; }
