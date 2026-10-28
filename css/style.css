@@ -177,7 +177,7 @@ figcaption { font-size: .85rem; color: var(--muted); margin-top: .4rem; }
 .project { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 1.6rem; padding: 1.6rem 0; border-top: 1px solid var(--rule); }
 .project-list > .project:first-child { border-top: 0; padding-top: 0; }
 .project[hidden] { display: none; }
-#p-erasmus { margin-top: 1.6rem; }
+#p-erasmus { margin-top: 0; }
 .cover { position: relative; display: block; align-self: start; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); border: 1px solid var(--rule-strong); }
 .cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s; }
 a.cover { cursor: zoom-in; }
