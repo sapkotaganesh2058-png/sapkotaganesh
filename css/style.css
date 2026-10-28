@@ -10,19 +10,19 @@
 
 :root {
   --bg: #e9eef1; --surface: #f6f9fa; --ink: #14222b; --muted: #526571; --rule: #cbd6dc; --rule-strong: #9fb2bd;
-  --accent: #1a5d8a; --accent-soft: #dbe9f2; --mark: #d93a2b; --on-mark: #ffffff; --dash: #d93a2b; --hero-bg: #d9eaf3;
+  --accent: #1a5d8a; --accent-soft: #dbe9f2; --mark: #0b7f84; --on-mark: #ffffff; --dash: #0b7f84; --hero-bg: #d9eaf3;
   --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
   --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --bar-h: 64px; color-scheme: light;
 }
 :root[data-theme="dark"] {
   --bg: #0d171d; --surface: #13232b; --ink: #e6eef2; --muted: #9bb0ba; --rule: #253943; --rule-strong: #3f5a67;
-  --accent: #7dc1ea; --accent-soft: #17323f; --mark: #ff6b5c; --on-mark: #14100c; --dash: #ff6b5c; --hero-bg: #0a1319; color-scheme: dark;
+  --accent: #7dc1ea; --accent-soft: #17323f; --mark: #4fd1c5; --on-mark: #0d171d; --dash: #4fd1c5; --hero-bg: #0a1319; color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0d171d; --surface: #13232b; --ink: #e6eef2; --muted: #9bb0ba; --rule: #253943; --rule-strong: #3f5a67;
-    --accent: #7dc1ea; --accent-soft: #17323f; --mark: #ff6b5c; --on-mark: #14100c; --dash: #ff6b5c; --hero-bg: #0a1319; color-scheme: dark;
+    --accent: #7dc1ea; --accent-soft: #17323f; --mark: #4fd1c5; --on-mark: #0d171d; --dash: #4fd1c5; --hero-bg: #0a1319; color-scheme: dark;
   }
 }
 
