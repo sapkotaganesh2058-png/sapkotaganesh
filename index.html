@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ganesh Sapkota | Mechanical Engineer · Operations Research · Energy</title>
   <meta name="description" content="Portfolio of Ganesh Sapkota, a Mechanical Engineer and MSc Renewable Energy Engineering candidate with a focus on operations research, production scheduling, energy modelling, energy efficiency, carbon finance and GHG accounting.">
-  <meta name="theme-color" content="#d9eef8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#d9eaf3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d171d" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Ganesh Sapkota | Mechanical Engineer · Operations Research · Energy">
   <meta property="og:description" content="Engineering, energy and climate work grounded in field evidence and analytical modelling.">
@@ -63,9 +63,8 @@
   }
   </script>
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Syne:wght@700;800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <script>
     document.documentElement.classList.add("js");
     try {
@@ -73,7 +72,7 @@
       if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="stylesheet" href="css/style.css?v=20261025-1">
+  <link rel="stylesheet" href="css/style.css?v=20261029-1">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -116,9 +115,10 @@
     <section class="hero" id="top" aria-labelledby="name">
       <div class="hero-in">
         <div class="hero-copy">
-          <p class="hello"><span class="hello-rule" aria-hidden="true"></span>Hello, I'm</p>
-          <h1 id="name"><span class="first"><span class="g">G</span>anesh</span> <span class="last">Sapkota</span></h1>
-          <p class="role">Mechanical Engineer · MSc Renewable Energy Engineering</p>
+          <h1 id="name"><span class="first">Ganesh</span><span class="last">Sapkota</span></h1>
+          <span class="cl" aria-hidden="true"></span>
+          <p class="role">Mechanical Engineer</p>
+          <p class="lede">MSc Renewable Energy Engineering. Operations research, energy planning and carbon finance.</p>
           <ul class="skills" aria-label="Areas of work">
             <li>Operations Research</li>
             <li>Production Scheduling</li>
@@ -128,14 +128,14 @@
             <li>Carbon Finance</li>
           </ul>
           <div class="hero-cta">
-            <a class="btn btn--dark btn--lg" href="#projects">View my work</a>
-            <a class="btn btn--lg" href="assets/cv/Ganesh_Sapkota_CV.pdf?v=20261024-4" download="Ganesh_Sapkota_CV.pdf">Download CV</a>
+            <a class="btn btn--solid" href="#projects">View my work</a>
+            <a class="btn" href="assets/cv/Ganesh_Sapkota_CV.pdf?v=20261024-4" download="Ganesh_Sapkota_CV.pdf">Download CV</a>
+            <a class="btn" href="#contact">Get in touch</a>
           </div>
           <p class="hero-meta">Pulchowk Campus, IOE, Tribhuvan University · Nepal · on Erasmus in Thessaloniki, Greece</p>
         </div>
 
         <div class="hero-photo">
-          <span class="ring" aria-hidden="true"></span>
           <img src="assets/images/profile/hero-sweater.webp" width="960" height="1200" alt="Ganesh Sapkota in a maroon sweater and brown jacket, standing in front of a green hedge" fetchpriority="high" decoding="async">
         </div>
       </div>
@@ -654,17 +654,17 @@
       </section>
 
       <section id="contact" aria-labelledby="h-contact">
+        <h2 id="h-contact">Contact</h2>
         <div class="closing">
           <div>
-            <h2 id="h-contact">Contact</h2>
             <p class="lead">
               Open to collaboration and technical assignments in energy, carbon finance and engineering.
             </p>
             <div class="contact-row">
               <a class="btn btn--solid" href="mailto:sapkotaganesh2058@gmail.com">Email me</a>
               <button class="btn" id="copyEmail" type="button" data-copy="sapkotaganesh2058@gmail.com">Copy address</button>
-              <a class="btn" href="assets/cv/Ganesh_Sapkota_CV.pdf?v=20261024-4" download="Ganesh_Sapkota_CV.pdf">Download CV</a>
               <a class="btn" href="https://www.linkedin.com/in/ganesh-sapkota-92aa942b7/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn" href="assets/cv/Ganesh_Sapkota_CV.pdf?v=20261024-4" download="Ganesh_Sapkota_CV.pdf">Download CV</a>
             </div>
             <p class="mail-line">sapkotaganesh2058@gmail.com</p>
           </div>
@@ -702,6 +702,6 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <noscript><p class="noscript">This site works without JavaScript; search, theme switching and the photo viewer are turned off.</p></noscript>
-  <script src="js/main.js?v=20261025-1"></script>
+  <script src="js/main.js?v=20261029-1"></script>
 </body>
 </html>
