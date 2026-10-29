@@ -164,6 +164,13 @@ figcaption { font-size: .85rem; color: var(--muted); margin-top: .4rem; }
 .job-body ul:not(.chips) { padding-left: 1.1rem; margin: 0 0 .8rem; }
 .job-body li { margin-bottom: .35rem; max-width: 62ch; }
 .inline-fig { margin: 1.2rem 0 0; }
+.work-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .7rem; margin-top: 1.2rem; max-width: 640px; }
+.work-gallery figure { margin: 0; }
+.work-gallery a { display: block; cursor: zoom-in; overflow: hidden; border: 1px solid var(--rule-strong); }
+.work-gallery img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; transition: transform .25s; }
+.work-gallery a:hover img { transform: scale(1.05); }
+.work-gallery figcaption { margin-top: .35rem; font-size: .8rem; color: var(--muted); line-height: 1.3; }
+@media (max-width: 560px) { .work-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .inline-fig img { width: 100%; max-width: 360px; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--rule-strong); }
 
 /* projects */
